@@ -1,0 +1,61 @@
+.topic-social-vilo
+  // display: flex
+  // justify-content: space-between
+  // margin-bottom: 20px
+
+  .participants-box
+    padding-top: 3px
+
+    span
+      display: inline-block
+      font-size: 14px
+      color: #666
+      margin-right: 5px
+      margin-bottom: 5px
+
+    .participant-profile
+      .avatar
+        width: 20px
+        height: 20px
+        border-radius: 50%
+
+    .view-more
+      display: inline-block
+      cursor: pointer
+
+  .share-links
+    position: relative
+    .wp
+    .facebook-icon
+    .twitter-icon
+    .linkclipboard-icon
+      background-size: cover
+      background-repeat: no-repeat
+      display: inline-block
+      margin-right: 5px
+      width: 32px
+      height: 32px
+
+    .twitter-icon
+      background-image: unquote("url('ext/lib/site/proyectos/twitter.svg')")
+
+    .facebook-icon
+      background-image: unquote("url('ext/lib/site/proyectos/facebook.svg')")
+
+    .linkclipboard-icon
+      background-image: unquote("url('ext/lib/site/proyectos/linkclipboard.svg')")
+      z-index: 1
+    .wp
+      background-image: unquote("url('ext/lib/site/proyectos/whatsapp.svg')")
+
+    .copied
+      display: none
+      padding: 3px 10px
+      background-color: #4CAF50
+      color: #fff
+      z-index: 2
+      font-size: 14px
+      position: absolute
+      right: -10px
+      top: -32px
+      border-radius: 15px

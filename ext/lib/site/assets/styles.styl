@@ -1,0 +1,135 @@
+.boton-azul
+  align-items: center
+  background-color: #1791be
+  box-shadow: 0 6px 4px -2px unquote("rgba(0, 0, 0, 0.24)"), 0 0 2px 0 unquote("rgba(0, 0, 0, 0.12)")
+  color: white
+  display: inline-block
+  font-family: 'AlfabetLight', sans-serif;
+  font-weight: 500
+  text-transform: uppercase;
+  margin: 5px;
+  line-height: 1.25;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 15px 20px;
+  border: none;
+  @media screen and (min-width: 764px)
+    line-height: 24px
+    font-size: 24px
+    line-height: 24px
+
+  &:active
+  &:hover
+    background-color: #bfeefc
+    border: none
+    color: #fff
+//    color: unquote("rgb(198, 198, 198)")
+
+.cont-boton-azul
+  width: 100%
+
+.fondo-titulo
+  display: inline-flex;
+  justify-content: center
+  align-items: center
+  background-color: #7cbb42
+  color: white
+  text-align: center
+  margin: 40px auto 25px
+  padding: 15px 20px 9px
+  h2
+    font-family: 'AlfabetBold', sans-serif
+    padding: 0
+    margin: 0 auto
+    font-size: 38px
+    font-weight: 400
+    text-transform: uppercase
+
+.topic-status
+  display: block
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  font-weight: normal
+  padding: 10px
+  color: #fff
+  background-color: rgba(23,145,190, 0.6)
+  &.status-active-finalizado
+    background-color: rgba(147,192,31, 0.6)
+    .progress-bar
+      li:before
+        background-color: #fff
+      .item-finalizado
+        &:before
+          border: 2px solid rgba(147,192,31, 0.6)
+          box-shadow: 0 0 0 2px #fff
+        span
+          display: block
+          position: absolute
+          color: black
+          top: -9px
+          right: 34%
+          font-size: 22px
+  &.status-active-preparacion
+    .progress-bar
+      .item-preparacion:before
+        background-color: #fff
+        border: 2px solid rgba(23,145,190, 0.6)
+        box-shadow: 0 0 0 2px #fff
+  &.status-active-compra
+    .progress-bar
+      .item-preparacion:before
+        background-color: #fff
+      .item-compra:before
+        background-color: #fff
+        border: 2px solid rgba(23,145,190, 0.6)
+        box-shadow: 0 0 0 2px #fff
+  &.status-active-ejecucion
+    .progress-bar
+      .item-preparacion:before,
+      .item-compra:before
+        background-color: #fff
+      .item-ejecucion:before
+        background-color: #fff
+        border: 2px solid rgba(23,145,190, 0.6)
+        box-shadow: 0 0 0 2px #fff
+  .progress-bar
+    margin: 10px -20px 0
+    padding: 0
+    li
+      list-style: none
+      display: inline-block
+      width: 25%
+      position: relative
+      text-align: center
+      cursor: pointer
+      &:before
+        content: ''
+        width: 18px
+        height: 18px
+        line-height : 20px
+        border-radius: 50%
+        display: block
+        text-align: center
+        margin: 0 auto 10px auto
+        background-color: rgba(23,145,190, 0.6)
+        border: 1px solid #fff
+      &:after
+        content: ""
+        position: absolute
+        width: calc(100% - 17px)
+        height: 1px
+        background-color: #fff
+        top: 9px
+        left: -41%
+      span
+        display: none
+      &:first-child
+        &:after
+          content: none
+
+.btn-primary-mgp
+  background: #24436F;
+  color: #fff;
+  &:hover
+    color: #fff

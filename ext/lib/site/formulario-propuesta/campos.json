@@ -1,0 +1,193 @@
+[
+    {
+        "name" : "anio",
+        "title" : "Año",
+        "mandatory" : false,
+        "kind" : "String",
+        "max" : 128,
+        "min" : 0
+    },
+  {
+    "name" : "state",
+    "title" : "Estado",
+    "description" : "Agregar una descripción del estado del proyecto",
+    "mandatory" : true,
+    "kind" : "Enum",
+    "options" : [
+        {
+            "name" : "pendiente",
+            "title" : "Pendiente"
+        },
+        {
+            "name" : "factible",
+            "title" : "Factible"
+        },
+        {
+            "name" : "no-factible",
+            "title" : "No factible"
+        },
+        {
+            "name": "integrado",
+            "title": "Integrado"
+        },
+        {
+            "name" : "no-ganador",
+            "title" : "No ganador"
+        },
+        {
+            "name" : "preparacion",
+            "title" : "En Preparación"
+        },
+        {
+            "name" : "compra",
+            "title" : "En Proceso de Compra"
+        },
+        {
+            "name" : "ejecucion",
+            "title" : "En Ejecución"
+        },
+        {
+            "name" : "finalizado",
+            "title" : "Finalizado"
+        }
+    ]
+  },
+  {
+    "name" : "project-budget-preparacion",
+    "title" : "En estado de preparación",
+    "description" : "Presupuesto estimado para estado de preparación",
+    "mandatory" : true,
+    "kind" : "String"
+  },
+  {
+    "name" : "project-budget-compra",
+    "title" : "En estado de compra",
+    "description" : "Presupuesto asignado al estado de compra",
+    "mandatory" : true,
+    "kind" : "String"
+  },
+  {
+    "name" : "project-budget-ejecucion",
+    "title" : "En estado de ejecución",
+    "description" : "Presupuesto asignado para el estado de ejecución",
+    "mandatory" : true,
+    "kind" : "String"
+  },
+  {
+    "name" : "project-budget-finalizado",
+    "title" : "En estado finalizado",
+    "description" : "Presupuesto ejecutado en el estado finalizado",
+    "mandatory" : true,
+    "kind" : "String"
+  },
+  {
+    "name" : "admin-comment",
+    "title" : "Comentario del Moderador",
+    "description" : "Escribir aquí un comentario en el caso que se cambie el estado a \"Factible\" o \"No factible\"",
+    "mandatory" : true,
+    "kind" : "LongString"
+  },
+  {
+    "name" : "admin-comment-referencia",
+    "title" : "ID a proyecto integrador",
+    "description" : "Colocar aquí el ID al proyecto integrador, en el caso que esta propuesta se haya integrado junto con otra",
+    "mandatory" : true,
+    "kind" : "String"
+  },
+  {
+      "name" : "nombre",
+      "title" : "Nombre y Apellido",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 128,
+      "min" : 0
+  },
+  {
+      "name" : "domicilio",
+      "title" : "Domicilio",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 200,
+      "min" : 0
+  },
+  {
+      "name" : "documento",
+      "title" : "DNI",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 50,
+      "min" : 0
+  },
+  {
+      "name" : "telefono",
+      "title" : "Teléfono",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 50,
+      "min" : 0
+  },
+  {
+      "name" : "email",
+      "title" : "Email",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 128,
+      "min" : 0
+  },
+  {
+      "name" : "titulo",
+      "title" : "Titulo",
+      "mandatory" : true,
+      "kind" : "String",
+      "max" : 128,
+      "min" : 0
+  },
+  {
+      "name" : "barrio",
+      "title" : "Barrio",
+      "mandatory" : true,
+      "kind" : "Enum",
+      "options" : [
+      ]
+  },
+  {
+    "name" : "problema",
+    "title" : "Problema o necesidad existente",
+    "mandatory" : true,
+    "kind" : "String",
+    "max" : 1000,
+    "min" : 0
+  },
+  {
+    "name" : "solucion",
+    "title" : "Propuesta para solucionar el problema",
+    "mandatory" : true,
+    "kind" : "String",
+    "max" : 1000,
+    "min" : 0
+  },
+  {
+    "name" : "beneficios",
+    "title" : "Beneficios que brindará el proyecto al barrio",
+    "mandatory" : true,
+    "kind" : "String",
+    "max" : 1000,
+    "min" : 0
+  },
+  {
+    "name" : "description",
+    "title" : "Descripción",
+    "mandatory" : false,
+    "kind" : "String",
+    "max" : 512,
+    "min" : 0
+  },
+  {
+    "name" : "votos",
+    "title" : "Votos",
+    "mandatory" : true,
+    "kind" : "Number",
+    "max" : 999999999,
+    "min" : 1
+  }
+]

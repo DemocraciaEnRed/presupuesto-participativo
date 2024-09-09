@@ -1,0 +1,61 @@
+#user-badges-wrapper form .form-group span.error
+  top: 40px
+
+h5
+  font-size: 22px;
+  margin-top: 30px;
+
+
+.panelExpandible
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 1px -2px #00000000, 0 2px 2px 0 #00000000, 0 1px 5px 0 #0000001f;
+  transition: all .1s ease-in-out;
+  &.active
+    margin: 8px -4px
+    border-radius: 5px;
+    box-shadow: 0 3px 1px -2px #00000033, 0 2px 2px 0 #00000024, 0 1px 5px 0 #0000001f;
+  &:first-of-type
+    border-radius: 5px 5px 0 0;
+  &:last-of-type
+    border-radius: 0 0 5px 5px;
+
+.titleShow
+  cursor: pointer;
+  margin: 0;
+  padding:16px 24px;
+  background-color: #fff
+  &.active
+    background-color: rgba(0, 0, 0, 0.082)
+
+
+
+
+.showHiden
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+  &:not(.hiden)
+    max-height: 10000px
+  &:last-of-type
+    border-top:none;
+
+.contentHiden
+  padding: 16px
+
+
+.activeAngle
+  transform: rotate(3.142rad);
+
+.glyphicon
+  transition: all .3s ease-in;
+
+.hiden
+  height:0px
+  overflow: hidden;
+
+.titleContent
+    font-size: 16px;
+    margin: 8px 0
+
+.button-save
+  margin: 16px 0 0 0

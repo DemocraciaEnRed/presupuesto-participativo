@@ -1,0 +1,185 @@
+.footer-static
+  font-family: 'AlfabetLight', sans-serif
+  background-color: #C481B6
+  width: 100%
+  font-size: 16px
+  padding: 5%
+  @media screen and (min-width: 769px)
+    font-size: 20px
+  .contacto-detalles
+    @media screen and (min-width: 500px)
+      float: left
+      width: 45%
+      margin-right: 5%
+    @media screen and (min-width: 769px)
+      float: left
+    h3
+      color: black
+      border-bottom: solid 2px #24436F
+      padding-bottom: 10px
+      margin: 10px 0 20px
+      font-weight: bold
+      font-size: 20px
+      line-height: 1.2em
+      @media screen and (min-width: 769px)
+        padding-left: 20px
+    a
+      color: white;
+      font-weight: normal;
+    a:hover, a:focus, a:active
+      color: white
+      text-decoration: underline;
+
+    .datos-contacto
+      margin: 20px 0
+      text-align: left
+      color: #ffffff
+      span:first-child
+        font-size: 18px
+        font-weight: 500
+        @media screen and (min-width: 769px)
+          font-size: 22px
+
+    p
+      color: #d8d8d8
+      line-height: 1.4
+      margin-bottom: 20px
+      @media screen and (min-width: 769px)
+        padding-left: 20px
+        font-size: 18px
+
+    span
+      color: #d8d8d8
+      display: block
+
+    span:first-child
+      color: white
+      margin-bottom: 3%
+      @media screen and (min-width: 500px)
+        margin-bottom: 0
+
+  .mapa-box
+    @media screen and (min-width: 500px)
+      float: right
+      width: 40%
+      margin-bottom: 30px;
+
+    > div
+      position: relative
+      width: 100%
+      padding-top: 52%
+      .mapa
+        background-image: unquote("url('ext/lib/site/footer/mapa.svg')")
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        border: none
+      @media screen and (min-width: 500px)
+        padding-top: 52%
+        margin-top: 40px
+  .logos
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 20px;
+    @media (max-width: 550px)
+      flex-direction: column
+      align-items: center
+  .logo-der
+    display: flex;
+    align-items: center;
+    span
+      color:white
+      font-size: 12px;
+      margin-left: 10px;
+    img
+      width: 86px
+  .logo-access
+    padding: 15px;
+    position: relative;
+    bottom: 20px;
+  .logo-flor
+      img
+        padding: 10px 20px 0;
+        width: 120px
+  .logo-ciudad
+      img
+        width: 150px
+        @media (max-width: 550px)
+          margin: 30px auto
+  .logo
+    clear: both
+    width: 15em
+    @media (max-width: 550px)
+      margin: 30px auto
+    .logo-mgp
+      display: block
+      background-image: unquote("url('ext/lib/site/footer/logo-pp.png')")
+      width: 100%
+      padding-top: 33%
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      margin-bottom: 5px
+      position: relative
+      @media screen and (min-width: 360px)
+        height: 70px
+
+  .social-icon
+    text-align: center
+    margin: 20px 0
+    @media screen and (min-width: 500px)
+      text-align: left
+      width: 300px
+      padding-left: 10px;
+      margin-bottom: 40px;
+
+    .social-facebook
+    .social-twitter
+    .social-mail
+    .social-instagram
+    .social-whatsapp
+      background-repeat: no-repeat
+      background-size: cover
+      width: 22px
+      height: 22px
+      margin: 0 5%
+      display: inline-block
+      @media screen and (min-width: 500px)
+        width: 28px
+        height: 28px
+      @media screen and (min-width: 769px)
+        width: 28px
+        height: 28px
+    .social-facebook
+      background-image: unquote("url('ext/lib/site/footer/facebook-c.png')")
+    .social-twitter
+      background-image: unquote("url('ext/lib/site/footer/twitter-c.png')")
+    .social-mail
+      background-image: unquote("url('ext/lib/site/footer/email-c.png')")
+    .social-instagram
+      background-image: unquote("url('ext/lib/site/footer/instagram-c.png')")
+    .social-whatsapp
+      background-image: unquote("url('ext/lib/site/footer/whatsapp-c.png')")
+  .terminos
+    margin: 10px 0 0
+    display: block
+    padding: 0
+    font-size: 12px
+    text-transform: uppercase
+    text-align: center
+    width: 100%
+    a
+      color: #d8d8d8
+      display: block
+
+@media screen and (max-width: 500px)
+  .container
+    max-width: 900px
+    margin: auto

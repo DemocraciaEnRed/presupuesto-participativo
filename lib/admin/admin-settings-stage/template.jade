@@ -1,0 +1,82 @@
+#topics-wrapper
+  .topics-admin
+    .password-settings
+      .heading
+        h2= 'Configuraciones'
+        //button.btn.btn-primary#borrar-proyectistas='borrar proyectistas'
+      form.form(action=form.action, method='post', role='form', autovalidate, autosubmit)
+        ul.form-messages
+        .container-fluid  
+          .row
+          .col-sm-12
+              h5="Estados de la plataforma"
+              .form-group
+                label.switch= 'Estado de subida de ideas'
+                  input.form(
+                    type='checkbox',
+                    data-name='propuestasAbiertas',
+                    id='checkboxProp'
+                  )
+                  .slider.round
+              .form-group.state-votation.row
+                .col-sm-4
+                  label= 'Pre ideación'
+                    input.form.pseudo-radio(
+                      type='checkbox',
+                      data-name="preIdeacion",
+                      id='preIde',
+                    )
+                .col-sm-4.last
+                  label= 'Ideación'
+                    input.form.pseudo-radio(
+                      type='checkbox',
+                      data-name="ideacion",
+                      id='ide',
+                    )  
+                .col-sm-4
+                  label= 'Pre votación'
+                    input.form.pseudo-radio(
+                      type='checkbox',
+                      data-name="preVotacion",
+                      id='prePostVot',
+                    )  
+                .col-sm-4
+                  label= 'Votación'
+                    input.form.pseudo-radio(
+                      type='checkbox',
+                      data-name="votacion",
+                      id='Vot',
+                    )
+                .col-sm-4.last
+                  label= 'seguimiento'
+                    input.form.pseudo-radio(
+                      type='checkbox',
+                      data-name="seguimientoNormal",
+                      id='seg',
+                    )
+            //.col-sm-6    
+              h5= ''
+              .form-group
+                label.switch= 'Mostrar sección eventos'
+                  input.form(
+                    type='checkbox',
+                    data-name='mostrarSeccionEventos',
+                    id='checkboxPoints'
+                  )
+                  .slider.round
+              .form-group.openProposal
+                label= 'Titulo sección propuestas'
+                input.form-control.form(
+                  type='text',
+                  data-name='noticeTexto'
+                )
+              .form-group
+                label.switch= 'Mostrar formulario proyectistas'
+                  input.form(
+                    type='checkbox',
+                    data-name='mostrarFormulariosProyectistas',
+                    id='checkboxPoints'
+                  )
+                  .slider.round
+
+        .form-group: button.btn.btn-success.btn-block.btn-lg= t('settings.save')

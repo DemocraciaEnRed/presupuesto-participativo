@@ -1,0 +1,50 @@
+#topics-wrapper
+  .topics-admin
+    .heading
+      h2= 'Preguntas y respuestas'
+      .row
+        .col-sm-8
+          .form-messages 
+        .col-sm-4
+          .action.text-right
+            button.btn.btn-info.createSortable="Ordenar"
+            button.btn.btn-danger.cancel-order.hidden="Cancelar"
+            button.btn.btn-success.save-order.hidden="Guardar"
+
+      .template-panel-group 
+        .panel.panel-default.template
+          .panel-heading
+            h4.panel-title
+            span.glyphicon.glyphicon-sort.icon-sort.hidden     
+          .panel-collapsable
+            .panel-body
+            .actions.text-right
+              span.glyphicon.glyphicon-edit
+              span.glyphicon.glyphicon-trash
+      .panel-group
+      form#editForm.form(action=form.action, method='post', role='form', autovalidate, autosubmit)
+        .form-group
+          h5= 'Pregunta:'
+          input.form-control(
+            id='question'
+            type='text'
+            name='question'
+            required
+          )
+          br
+        .form-group
+          h5='Respuesta:'
+          #editAnswer
+          input#answer.textArea(
+            type='textarea'
+            hidden
+          )
+        .alert.alert-warning.hidden(
+          role="alert"
+        )
+          span.glyphicon.glyphicon-alert
+          span.sr-only="alert:"
+          span.alertText
+        .form-group.actionsForm
+          button.btn.btn-success.btn-lg= t('settings.save')
+          a.btn.btn-danger.btn-lg= t('common.cancel')

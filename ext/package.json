@@ -1,0 +1,33 @@
+{
+  "name": "ext",
+  "version": "1.3.6",
+  "description": "Presupuesto participativo Municipalidad General Pueyrredon",
+  "main": "lib/boot",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "browser": {
+    "lib/config": "lib/config/config"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "flickity": "2.0.8",
+    "json2xls": "^0.1.2",
+    "juice": "^6.0.0",
+    "jump.js": "1.0.2",
+    "lodash.debounce": "4.0.8",
+    "lodash.indexof": "^4.0.5",
+    "lodash.pick": "4.4.0",
+    "lodash.sortby": "^4.7.0",
+    "react-chartjs-2": "^2.7.6",
+    "react-collapsible": "^2.7.0",
+    "react-pdf-js": "^3.0.7",
+    "react-responsive-accordion": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "3",
+    "eslint-config-democracyos": "1.2.1"
+  }
+}

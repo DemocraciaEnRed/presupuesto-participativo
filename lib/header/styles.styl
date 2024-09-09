@@ -1,0 +1,71 @@
+@import "*/styles"
+
+#outer-layout
+  padding: 0 !important
+nav.navbar
+  box-shadow 1px 1px 1px -1px rgba(#000, .175)
+  padding: 0 0 0 32px
+  @media screen and (max-width: 500px)
+    padding: 0 0 0 15px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  border-width: 0;
+  &:before, &:after
+    content: none
+  .navbar-brand
+    padding: 0
+    margin-right: 0
+    height: auto;
+    img
+      height: 60px
+      @media screen and (min-width: 1080px)
+        -moz-heigth: 60%
+    .logo-mobile
+      height: 30px
+  a
+    color: #24436F
+    font-weight: normal
+  .navbar-nav
+    height: 80px;
+    font-size: 17px
+    display: flex
+    align-items center
+    margin-right: 0
+    margin-top: 0
+    .user-badge
+      .user-badge-link
+        margin: 0
+    .nav-item //campanita notificaciones
+      margin: 0 20px
+      @media screen and (min-width: 500px)
+        margin: 0 25px
+      .nav-link
+        color inherit
+        span.icon-bell
+          font-size: 24px
+          color: #24436F
+          @media screen and (min-width: 975px)
+            font-weight: normal          
+  .header-item
+    padding: 0 20px;
+    @media screen and (max-width: 500px)
+      padding: 0 13px;
+    font-weight: normal
+    display: flex;
+    align-items: center;
+    &:hover, &.active
+      background-color: #F3F3F3
+      border-radius: 34px;
+      height: 44px;
+      padding: 3px, 17px, 3px, 17px;
+    .header-link
+      height: auto
+      position: relative
+      color: black
+  .user-badge-helper
+    margin-left 
+
+ a.header-link.anon-user
+  text-transform:lowercase

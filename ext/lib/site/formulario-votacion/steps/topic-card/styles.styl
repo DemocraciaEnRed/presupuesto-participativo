@@ -1,0 +1,86 @@
+
+.voto-topic-card
+  width: 100%
+  height: auto
+  height: 230px
+  @media screen and (max-width: 768px)
+    height: 320px
+  @media screen and (max-width: 424px)
+    height: 450px    
+
+  border-radius: 5px;
+  box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.25);
+  border: solid 1px #bab8b8;
+  margin-bottom: 2vh
+  color: black
+  padding-left: 3vh
+  &:hover
+    box-shadow: 0 2px 5px #555
+  &.active
+    background: #C481B6;
+    color: white
+    .voto-topic-card-info
+      u
+        color: white
+
+  .voto-topic-card-info
+    h1
+      margin-bottom: 5px
+      font-size: 18px
+      font-family: 'AlfabetBold', sans-serif
+      text-transform: uppercase
+    p
+      text-transform: none
+    u
+      font-family: 'AlfabetBold', sans-serif
+      color: #C481B6
+      cursor: pointer
+  
+  .voto-topic-card-presupuesto
+    h1
+      margin-bottom: 5px
+      font-size: 18px
+      font-family: 'AlfabetBold', sans-serif
+      text-transform: uppercase
+
+  .voto-topic-card-checkbox
+    padding-top: 50%
+    .select-topic
+      box-sizing: border-box;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      @media screen and (max-width: 768px)
+        width: 30px;
+        height: 30px;
+      border: 2px solid #C481B6;
+      border-radius: 5px;
+      cursor: pointer
+
+  .voto-topic-card-tags
+    margin-bottom: 10px;
+    @media screen and (min-width: 769px)
+      margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    align-content: baseline;
+    flex-wrap: wrap;
+    .voto-glyphicon
+      margin-right: 10px;
+      top: 0px;
+    .voto-tag-wrapper
+      font-size: 14px
+      margin-right: 8px
+      margin-bottom: 10px;
+      color: #000000;
+      border-radius: 8px;
+      background-color: #f3f3f3;
+      padding: 5px 7px;
+      font-weight: 400;
+      &.tag-zona
+        background-color: #24436F;
+      &.tag-presupuesto
+        background-color: #24436F;        
+        color: #fff
+      &:last-child
+        margin-right: 0

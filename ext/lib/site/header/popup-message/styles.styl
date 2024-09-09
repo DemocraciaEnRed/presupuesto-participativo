@@ -1,0 +1,25 @@
+.popup-wrapper
+  position: absolute;
+  top: 70px;
+  background-color: #24436F;
+  padding: 20px;
+  border-radius: 15px;
+  right: 10px;
+  color: white
+
+  @media screen and (max-width: 640px)
+    border: 1px solid white;
+
+  @media screen and (max-width: 975px)
+    right: 70px;
+    width: 210px;
+
+  .arrow-up
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 8px solid #24436F;

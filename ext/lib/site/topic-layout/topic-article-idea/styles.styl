@@ -1,0 +1,575 @@
+.topic-article-wrapper
+  padding-top: 0em
+  width: 100%
+
+  @import './admin-actions/styles'
+  @import './header/styles'
+  @import './content/styles'
+  @import './footer/styles'
+  @import './social/styles'
+  @import './cause/styles'
+  @import './comments/styles'
+  @import './step-progress/styles'
+
+  .cover
+    width: 100%
+    height: 408px
+    background-size: cover
+    background-position: center
+  hr
+    font-size 15px
+    margin 35px 0 30px
+    height auto
+    border 0
+    line-height 0
+    text-align center
+    letter-spacing 8px
+    color #444
+
+    &:after
+      content '· · ·'
+
+.topic-overlay
+  position fixed
+  top 0
+  right 0
+  width 100%
+  height 100%
+  z-index 1
+  background rgba(0,0,0,0.5)
+
+  @media screen and (min-width 701px)
+    display none
+
+.topic-article-content
+  max-width 848px
+  margin 0 auto
+  padding-left 15px
+  padding-right 15px
+  &.entry-content
+    font-family: 'Museo300', sans-serif!important
+    font-size: 20px;
+    font-weight: 100;
+  &.topic-tags
+    color: #9a3a96
+    font-weight: 100
+    margin: 30px auto
+    font-size: 20px
+    .topic-article-tag
+      margin: 2px
+      display: inline-block
+  //  span
+  //    font-weight: bold
+  &.topic-actions
+    margin: 30px auto;
+    position: relative;
+    padding: 20px 35px;
+    @media(min-width: 470px)
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+.votar-este
+  text-align: center
+  background: #e3e3e3
+  color: #555!important
+  padding: 20px 60px
+  box-shadow: 0 3px 10px -2px #555
+  border-radius: 2px
+  margin-bottom: 20px
+  @media screen and (max-width: 500px)
+    padding: 20px 0
+    p
+      padding: 0 5px
+  p
+    font-size: 18px
+    margin: 20px auto
+    max-width: 440px
+  a
+    border: none
+    @media screen and (max-width: 500px)
+      font-size: 16px
+  a:hover
+    color: #fff
+    text-decoration: none
+
+.proyecto-ganador
+  text-align: center
+  margin: 0 auto
+  max-width: 650px
+  font-family: 'Museo300', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  .ver-resu
+    margin: 10px 0 30px
+    display: block
+  .box-header
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0
+    background-color: #7cbb42
+    color: white
+    font-weight: bold
+    font-size: 30px
+    text-transform: uppercase
+  .box-content
+    display: flex
+    justify-content: space-around
+    justify-content: space-evenly
+    align-items: center
+    flex-wrap: wrap
+    padding: 10px 0
+    background-color: #e9e9e9
+    .box-content-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      margin: 5px 10px
+      .box-content-title
+        font-weight: 500
+        font-size: 24px
+      .box-content-info
+        color: #3d699e
+        font-weight: 500
+        font-size: 47px
+  .box-footer
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px 4px
+    background-color: #3d699e
+    color: #ffffff
+    .hashtag
+      font-size: 24px
+      margin-right: 9px
+      @media screen and (max-width: 450px)
+        font-size: 20px
+    a
+      margin: 0 9px
+    a.fb
+      width: 24px
+      height: 22px
+      background: unquote("url('ext/lib/site/proyectos/fb-icon.svg')") no-repeat center
+      background-size: contain
+      margin-bottom: 1px
+    a.tw
+      width: 24px
+      height: 25px
+      background: unquote("url('ext/lib/site/proyectos/tw-icon.svg')") no-repeat center
+      background-size: contain
+
+.embed-container
+  position relative
+  padding-bottom 56.25%
+  height 0
+  overflow hidden
+  max-width 100%
+
+  iframe
+  object
+  embed
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    border none
+
+.no-topics
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 100%
+    button
+      margin-top 20px
+    p
+      color #888
+
+topicBoxSize = 15
+topicColor = #333
+topicColor2 = #999
+
+.loader-wrapper
+  position relative
+  flex 1
+
+  .topic-loader
+    position absolute
+    left 50%
+    top 50%
+    border-radius 100%
+    width topicBoxSize * 1px
+    height topicBoxSize * 1px
+    box-shadow topicBoxSize*1px topicBoxSize*1px topicColor2,
+    topicBoxSize*-1px topicBoxSize*1px topicColor,
+    topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+    topicBoxSize*1px topicBoxSize*-1px topicColor
+    animation topic-loader-spin ease infinite 4s
+    transition-property opacity
+
+    @-webkit-keyframes topic-loader-spin {
+      0%,
+      100% {
+        box-shadow: topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor
+      }
+
+      25% {
+        box-shadow: topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2
+      }
+
+      50% {
+        box-shadow: topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor
+      }
+
+      75% {
+        box-shadow: topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2
+      }
+    }
+
+.topic-article-author
+  text-align: right
+
+.topic-article-zona
+  margin-bottom: 20px
+
+
+.topic-article-subtitulo
+  color: #1D9DC1
+  font-size: 1.5em
+  margin-top:20px
+  margin-bottom: 10px
+
+.topic-article-span
+  font-size: 1.3em;
+  background-color: #C481B6;
+  font-weight: bold;
+  padding: 4px 17px 4px 6px;
+  color: #FFF;
+
+.topic-article-proyecto
+  font-weight: normal
+  white-space: pre-wrap
+  line-height: 1.5em 
+  padding: 2px 0 0 10px;
+  color: #000000 
+
+.topic-article-idea
+  font-weight: normal
+  white-space: pre-wrap
+  line-height: 1.5em 
+  padding: 2px 0 0 10px;
+  color: #000000 
+
+.topic-article-comentario
+  font-weight: normal
+  white-space: pre-wrap
+  line-height: 1.5em
+  padding: 2px 0 0 10px;
+  color: #000000
+
+
+// .topic-article-status-container
+  // @media(max-width: 1100px)
+  //   width:100%
+.topic-article-status-container
+  position: relative
+  margin-bottom: 15px;
+
+.topic-tags
+  &.topic-article-content
+    .topic-article-tag
+      background-color: #24436F
+      font-size: .65em
+      border-radius: 8px
+      color: #fff
+      padding:6px 10px 6px 10px
+      font-weight: normal
+      text-decoration: none !important
+
+.alert
+  &.alert-info
+    &.alert-propuesta
+      background-color: #24436F
+      color: white
+      max-width: 70%
+      border: none
+      max-width 820px
+      margin 0 auto
+      padding-left 15px
+      padding-right 15px
+      margin-top:60px
+      margin-bottom:30px
+      p
+        padding-top:20px
+      p:last-child
+        text-align: right
+      span
+        font-weight: bold
+  &.alert-proyecto
+    max-width: 848px;
+    margin-bottom: 10px;
+    text-align: left
+
+  .admin-comment-referido
+    font-style:italic
+    color: white
+    a
+      font-weight:bold
+      text-decoration: underline
+      color: white
+
+.topic-article-header
+  &.topic-article-content
+    header
+      margin-top:0px !important
+
+.topic-article-wrapper
+  .topic-article-content
+    margin-top: 3vh
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    &.entry-content
+      display: flex
+      &.skeleton-propuesta
+        flex-direction: column
+      $.skeleton-proyecto
+        flex-direction: row-reverse
+      @media screen and (max-width: 760px)
+        display: block
+
+
+.banner
+    width: 100%
+    display: block
+    margin: 0 auto
+    margin-top:20px
+    margin-bottom:0
+    padding: 0
+    @media(max-width: 768px)
+      height: auto
+      margin-bottom: 0;
+    header
+      padding-top:245px !important
+      @media(max-width: 768px)
+        padding-top:7rem !important
+      @media(max-width: 399px)
+        padding-top:8rem !important
+
+.topic-article-content
+  &.topic-admin-actions
+    padding: 0;
+    margin: 10px 0 20px;
+    .btn-default
+      font-family: 'AlfabetExtraBold', sans-serif!important
+      color: #C481B6;
+      background-color: #fff;
+      border: 1px solid #C481B6
+      padding: 15px 5px;
+      border-radius: 3px;
+      width: 100%;
+      @media(max-width: 768px)
+        padding: 10px 5px
+      &:hover
+        color: #FFF;
+        background-color: #C481B6
+        text-decoration: none;
+    // position: relative
+    // right: 0px
+    // top: 35px
+    // z-index: 10
+    // @media screen and (min-width: 1000px)
+    //   position: relative
+    // @media screen and (max-width: 1000px)
+    //   display: inline-block
+    //   float: right
+    //   margin-right: 0
+    //   position: relative
+    //   right: 0px
+    //   top: 20px
+    //   width: 80%
+    //   display: flex
+    //   justify-content: flex-end
+
+// estos mismos estilos están en ext/lib/site/home-catalogo/topic-card/votar-button/styles.styl
+.votar-button-wrapper
+  float: left;
+  .btn
+    background: #C481B6
+    margin: 0
+    border-radius: 5px;
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase;
+    border: solid 1px #C481B6
+    &.btn-empty
+      background: #FFFFFF
+      color: #24436F
+      border: solid 2px #24436F;
+    &.btn-filled
+      background: #24436F
+      color: #FFFFFF
+      &:hover
+        background: #FFFFFF
+        color: #24436F
+        border: solid 1px #24436F;
+    &.btn-voted
+      background: #24436F
+      color: #FFFFFF
+      &:hover
+        cursor: default;
+
+  .confirmas-voto
+    color: #24436F
+    font-weight: bold
+    margin-right: 9px;
+
+  .btn-si
+    margin-right: 10px;
+
+
+.ver-todos-button-wrapper
+  float: left;
+  .btn
+    background: #C481B6
+    margin: 0
+    border-radius: 5px;
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase;
+    border: solid 1px #C481B6
+    &.btn-empty
+      background: #FFFFFF
+      color: #24436F
+      border: solid 2px #24436F;
+    &.btn-filled
+      background: #24436F
+      color: #FFFFFF
+      &:hover
+        background: #FFFFFF
+        color: #24436F
+        border: solid 1px #24436F;
+    &.btn-voted
+      background: #24436F
+      color: #FFFFFF
+      &:hover
+        cursor: default;
+
+  .confirmas-voto
+    color: #24436F
+    font-weight: bold
+    margin-right: 9px;
+
+  .btn-si
+    margin-right: 10px;
+
+
+
+.seccion-contenido
+  margin: auto
+  min-width: 100%
+
+  .Collapsible
+    text-align: left;
+    margin-bottom: 10px;
+    border-top: unset
+    padding-top: unset
+    background: #F1F1F1;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+  .Collapsible__trigger
+    padding: 8px
+    font-family: 'AlfabetExtraBold', sans-serif!important
+    display: flex;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFFFFF
+  
+  .topic-article-idea
+    background: #C481B6;
+    
+
+  .topic-article-comentario
+    background: #C481B6;
+
+  .topic-article-proyecto
+    background: #24436F;
+    font-family: 'Museo500', sans-serif !important
+    color: #fff
+
+  .topic-article-integrado
+    margin: 15px
+    text-align: center;
+
+    .titulo
+      font-family: 'AlfabetExtraBold', sans-serif !important;
+      text-align: center;
+      color: #C481B6;
+
+    .link
+      border: 1px solid #C481B6;
+      box-sizing: border-box;
+      border-radius: 24px;    
+      color: #C481B6
+      margin: 5px
+      &:hover
+        color: #C481B6
+
+  .Collapsible__contentInner
+    font-family: 'Museo300', sans-serif !important;
+    padding: 12px
+    font-size: 18px
+    font-weight: normal
+    white-space: pre-wrap
+    line-height: 1.5em
+    margin: 10px 0 30px;    
+
+.card-presupuesto
+  width: 100%
+  height: auto
+  background: #F9F9F9
+  text-align: center
+  padding: 1px
+  h3
+    font-family: 'AlfabetExtraBold', sans-serif!important
+    font-size: 20px;
+    color: #C481B6;
+    font-weight: 400;
+    letter-spacing: 0em;
+    color: #C481B6;
+  span
+    font-family: 'Museo300', sans-serif!important
+    font-weight: 400;
+    font-size: 40px;
+    color: #000000;
+
+.topic-article-album
+  padding-bottom: 3rem;
+  .topic-article-album-image
+    // instagram style, responsive, square ratio
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;

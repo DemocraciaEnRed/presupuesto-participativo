@@ -1,0 +1,180 @@
+.entry-content
+  font-family 'Noto Serif', serif
+  line-height 1.6
+  margin-bottom 2em
+
+a:hover
+  color #3d699e
+  text-decoration underline
+
+img
+  max-width 100%
+
+.body
+  font-size 110%
+.summary
+  font-size 16px
+  margin 40px 0
+
+.clauses
+  margin-top 20px
+  .clause
+    margin-bottom 20px
+    word-wrap break-word
+    img
+      width 100%
+
+
+.proyecto-ganador
+  width:300px
+  float:right
+  text-align: center
+  margin: 0 auto
+  font-family: 'AlfabetLight', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  @media screen and (max-width: 760px)
+    width:100%
+    float:none
+  &.topic-article-content
+    padding-left:30px
+    @media screen and (max-width: 760px)
+      padding-left:0px
+      padding-right:0
+  .ver-resu
+    margin: 10px 0 30px
+    display: block
+    font-size:16px
+  .topic-info
+    width: 100%
+    text-align: center
+    background: #f9f9f9
+    padding: 15px 0
+  .topic-location,
+  .topic-year
+    text-transform: uppercase
+    color: black
+    display: inline-block
+    width: 50%
+    font-weight: 400
+    font-size: 14px
+  .topic-year
+    border-right: 1px solid #e9e9e9
+  .topic-location
+    color: #0099c3
+    text-decoration: underline
+    &.unavailable
+      color: black
+      text-decoration: none;
+    &:before
+      background-image: unquote("url('ext/lib/site/topic-layout/topic-article-proyecto/content/FichaLocation.png')")
+      display: inline-block
+      content: ''
+      width: 24px
+      height: 24px
+      background-repeat: no-repeat
+      background-size: cover
+      vertical-align: middle
+  .topic-status
+    font-size: 14px
+    span
+      font-weight: normal
+    .progress-bar
+      li:after
+        width: calc(100% - 19px)
+        left: -36%
+  
+  .box-header
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0
+    background-color: #0099c3
+    color: white
+    font-weight: bold
+    font-size: 20px
+    text-transform: capitalize
+  .box-content
+    display: flex
+    justify-content: space-around
+    justify-content: space-evenly
+    align-items: center
+    flex-wrap: wrap
+    padding: 0
+    background-color: #e9e9e9
+    .box-content-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      margin: 5px 10px
+      width: 100%
+      .box-content-title
+        font-weight: 500
+        font-size: 16px
+      .box-content-info
+        color: #8c1e81
+        font-weight: 900
+        font-size: 30px
+    .box-content-social
+      text-align: center
+      margin: 0 0 10px
+      display: block
+      width: 100%
+      a
+        background-repeat: no-repeat
+        background-size: cover
+        width: 30px
+        height: 30px
+        margin: 0
+        display: inline-block
+        cursor: pointer
+        @media screen and (min-width: 500px)
+          width: 32px
+          height: 32px
+        @media screen and (min-width: 769px)
+          width: 32px
+          height: 32px
+      .social-facebook
+        background-image: unquote("url('ext/lib/site/topic-layout/topic-article-proyecto/content/FichaFacebook.png')")
+      .social-twitter
+        background-image: unquote("url('ext/lib/site/topic-layout/topic-article-proyecto/content/FichaTwitter.png')")
+      .social-mail
+        background-image: unquote("url('ext/lib/site/footer/email-c.png')")
+        filter: brightness(0.1)
+        background-size: 84%
+        background-position: center
+      .social-instagram
+        background-image: unquote("url('ext/lib/site/topic-layout/topic-article-proyecto/content/FichaInstagram.png')")
+      .social-linkedin
+        background-image: unquote("url('ext/lib/site/topic-layout/topic-article-proyecto/content/FichaLinkedin.png')")
+  .box-footer
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px 4px
+    background-color: #0099c3
+    color: #ffffff
+    .hashtag
+      font-size: 13px
+      margin-right: 9px
+      @media screen and (max-width: 450px)
+        font-size: 15px
+    a
+      margin: 0 9px
+    a.fb
+      width: 24px
+      height: 22px
+      background: unquote("url('ext/lib/site/proyectos/fb-icon.svg')") no-repeat center
+      background-size: contain
+      margin-bottom: 1px
+    a.tw
+      width: 24px
+      height: 25px
+      background: unquote("url('ext/lib/site/proyectos/tw-icon.svg')") no-repeat center
+      background-size: contain
+
+.topic-article-content.entry-content
+  min-height:320px
+  padding-bottom:20px
+  @media screen and (max-width: 760px)
+    display: flex
+    flex-direction: column-reverse

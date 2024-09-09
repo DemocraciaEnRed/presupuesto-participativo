@@ -1,0 +1,72 @@
+.user-badge
+  position relative
+
+  &.active
+    button
+      background inherit
+    .dropdown-list
+      display block
+
+  button
+    color black
+    background none
+    border none
+    cursor pointer
+    padding 0
+    margin 0
+
+    .name
+      font-weight bold
+      font-family AlfabetLight
+
+    .caret
+      margin-left 6px
+      position relative
+      right 0
+      top 0
+      color inherit
+
+    img
+      margin 0
+      margin-right 10px
+      width 32px
+      height 32px
+      border-radius 100px
+      @media screen and (min-width: 975px)
+        width 36px
+        height 36px
+
+    .glyphicon
+      margin-left 5px
+      top 1px
+      font-size 12px
+
+  .dropdown-list
+    display none
+    position absolute
+    top 100%
+    right 0
+    z-index 1000
+    padding 0
+    width 100%
+    font-size 14px
+    white-space nowrap
+    list-style none
+    border 1px solid rgba(#000,.15)
+    box-shadow 1px 1px 4px -1px rgba(#000, .175)
+    color #000
+    background-color #f9f9f9
+
+    a
+      display block
+      clear both
+      padding 10px 20px
+      line-height 1.5
+      text-transform none
+      font-weight bold
+      text-decoration none
+      color inherit
+
+      &:hover
+        background #2c3e50
+        color white

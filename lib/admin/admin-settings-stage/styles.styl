@@ -1,0 +1,134 @@
+#user-badges-wrapper form .form-group span.error
+  top: 40px
+
+h5
+  font-size: 22px;
+  margin-top: 30px;
+
+
+switch 
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+
+
+.switch input 
+  display:none;
+
+
+.slider
+  position:relative;
+  margin-top:6px;
+  background-color: #ccc;
+  width:60PX
+  height:31px
+  cursor: pointer;
+  transition: .4s;
+
+
+.slider:before 
+  background-color: #fff;
+  bottom: 10%;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+
+
+input:checked + .slider 
+  background-color: #66bb6a;
+
+
+input:checked + .slider:before 
+  transform: translateX(26px);
+
+
+.slider.round 
+  border-radius: 34px;
+
+
+.slider.round:before 
+  border-radius: 50%;
+
+.state-votation
+  border: 1px solid #ccc
+  border-radius: 20px
+  overflow: auto
+  display:flex
+  @media(max-width: 768px)
+    display: grid
+  .col-sm-4
+    border-left: 1px solid #ccc
+    padding: 0
+    @media(max-width: 768px)
+      border-top: 1px solid #ccc
+  .col-sm-4:first-child
+    border: none
+    @media(max-width: 768px)
+      border-top: none
+  label
+    cursor: pointer
+    text-align: center 
+    margin: 0!important
+    padding: 16px 8px
+    width: 100%
+    height: 100%
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  .active
+    background-color: #66bb6a
+    color: white
+
+.pseudo-radio
+  display: none
+
+.combobox
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: text
+  .comboboxChips
+    position: relative
+    display: flex;
+    z-index: 2
+    flex-wrap: wrap;
+    padding:4px
+    align-items: center;
+    .chip
+      background-color: #ccc;
+
+      margin: 4px;
+      padding: 4px;
+      font-size: 12px;
+      border-radius: 50px;
+      flex: 0 1 auto
+    span
+      margin-left: 2px!important
+      cursor: pointer
+    .form
+      height: 100%
+      margin: 4px;
+      flex: 1 1
+      border: none
+      box-shadow: none
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+.hiden
+  height:0px
+  overflow: hidden;
+
+
+.last
+  width: 33.4%
+  @media(max-width: 768px)
+    width: 100%
+
+.help-text
+  font-weight: 200
+  margin-top:0.3em!important

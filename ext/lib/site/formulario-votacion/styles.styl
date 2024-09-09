@@ -1,0 +1,460 @@
+@import '../../../../node_modules/tags-input/tags-input.css'
+@import '../../../../lib/admin/admin-topics-form/tag-autocomplete/styles'
+
+
+.form-votacion
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: 'AlfabetLight', sans-serif
+  margin-bottom: 10%
+  &.blur
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);  
+    pointer-events: none;  
+  
+  @media (max-width: 400px)
+    margin-top: 30px
+  .votacion-header
+    // text-shadow: 0 1px 3px #333
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: flex-end
+    min-height: 150px
+    width: 100%
+    padding: 0 20px
+    text-align: center
+    background-color: #FFF
+    background-size: 100%
+    h1
+      font-size: 25px
+      margin:0;
+      font-family: 'AlfabetBold', sans-serif
+      text-transform: uppercase;
+      color: #C481B6;
+      padding: 10px 20px;
+      @media screen and (min-width: 764px)
+        font-size: 32px
+    p
+      font-size: 16px
+      font-family: 'AlfabetLight', sans-serif
+      margin:0;
+      padding: 4px 30px;
+      // margin-top:6px;
+      // background-color: rgba(23,145,190,0.6)
+      @media screen and (min-width: 764px)
+        font-size: 20px
+
+  .wrapper
+    max-width:900px
+    width: 100%
+    padding: 20px
+    position: relative
+    li
+      font-size: 16px
+      font-family: 'AlfabetLight', sans-serif
+      margin:0;
+      padding: 4px 30px;
+    .more-info
+      text-align: center;
+      font-size: 1.3em;
+      margin-top: 10px;
+    .bar-section
+      padding: 2rem 1rem;
+      text-align: center
+      &.acerca-votacion
+        margin-top: 50px;
+      p
+        margin: 0
+        color: #000
+        text-align: center;
+        line-height: normal;
+      .section-title
+        font-size: 30px
+        font-weight: bold
+        font-family: 'AlfabetLight', sans-serif
+        color: #000
+      .section-subtitle
+        color: #484747
+        font-size: 16px
+        text-align: center
+        font-family: 'AlfabetLight', sans-serif
+      .section-intro
+        background-color: #8c1e80
+        font-size: 16px
+        color: white
+        padding: 4px 20px
+        display: inline-block
+        margin-bottom: 25px
+    .required
+      color: #000
+    label
+      // color: rgba(0, 0, 0, 0.55)
+      margin: 10px 0 15px;
+      font-size: 25px;
+      font-weight: bold;
+
+    input
+      width:100%
+    .tags-input
+      border-radius: 5px
+      border: 1px solid #CACACA
+      padding: 3px 10px
+      width: 100%
+
+    input, select, textarea
+      border-radius: 0px
+      border: 1px solid #CACACA
+      border-bottom: 2px solid #CACACA
+      font-size: 1.2rem
+      color: #000
+      &:focus
+        box-shadow: none;
+        // border-color: #1791be
+        border: 1px solid #1791be
+        border-bottom: 2px solid #1791be
+    .submit-div
+      text-align: center
+      .submit-btn
+        color: #24436F
+        font-weight: 800
+        border: 2px solid #24436F
+        background-color: #FFF;
+        border-radius: 5px
+        padding: 12px 60px
+        font-weight: 800;
+        font-size: 21px
+        cursor: pointer
+        &:hover
+          background-color: #24436F;
+          color: #FFF
+    .form-section-label
+      color: #9e41b9
+      font-size: 18px
+      font-weight: bold
+      @media screen and (min-width: 1360px)
+        position: relative
+        left: -240px
+        margin-top: 10px
+        top: 30px
+
+  select.special-height
+    height: 3rem !important;
+
+  ul.tags
+    list-style: none;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 0;
+  ul.tags li
+    float: left;
+
+  .tag
+    background: #eee;
+    border-radius: 8px;
+    color: #000;
+    display: inline-block;
+    //height: 25px;
+    line-height: 25px;
+    padding: 0 11px;
+    position: relative;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    /* &::before
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+      content: '';
+      height: 6px;
+      left: 10px;
+      position: absolute;
+      width: 6px;
+      top: 10px;
+    &::after
+      background: #fff;
+      border-bottom: 13px solid transparent;
+      border-left: 10px solid #eee;
+      border-top: 13px solid transparent;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0; */
+    &:hover
+      background-color: #24436F;
+      color: white !important;
+      cursor: pointer;
+    /* &:hover::after
+      border-left-color: #8c1e80; */
+    &.active
+      background-color: #24436F;
+      color: white;
+      &:after
+        content: 'x'
+        padding-left: 12px
+   /*  &.active::after
+      border-left-color: #8c1e80; */
+
+  .add-color
+    color: #24436F;
+  .help-text
+    display: block
+    font-size: 16px
+    color: #000
+    margin: 0 0 .3em
+    &.requerido
+      font-size: .7em
+      font-style: italic
+      color: #828282
+
+  .span-alert
+    color: #9e41b9
+    font-size:.8em
+    @media screen and (min-width: 1360px)
+        position: relative
+        // left: -240px
+        margin-top: 10px
+        top: 30px
+  .cronograma-alert
+    padding-top:10px
+
+  .cronograma
+    tex-align:right
+    margin-top: 40px
+
+  .error-box
+    border: 2px solid red;
+    border-radius: 10px
+    padding: 15px;
+    margin-bottom: 10px
+    ul
+      margin-bottom: 0
+    li.error-li
+      color: red;
+
+  .footer-votacion
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FAFAFA;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.25);
+    color: white;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1vh 25% 1vh 25%;
+    display: flex;
+    @media (max-width: 768px)
+      padding: 1vh 1vh 1vh 1vh;  
+    .button-anterior
+      display: inline-block
+      flex-direction: row;
+      gap: 20px;
+      background-color: #CCCCCC;
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+      border-radius: 8px;
+      font-size: 20px;
+      @media (min-width: 768px)
+        padding: 10px 15px
+        font-size: 25px;
+      font-family: 'AlfabetLight', sans-serif
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+      
+
+    .button-siguiente
+      display: inline-block
+      flex-direction: row;
+      gap: 20px;
+      background: #C481B6
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+      border-radius: 8px;
+      font-size: 20px;
+      @media (min-width: 768px)
+        padding: 10px 15px
+        font-size: 25px;
+      font-family: 'AlfabetLight', sans-serif
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+      
+
+.boton-comenzar
+  font-family: 'AlfabetLight', sans-serif
+  font-size: 25px;
+  background: #24436F;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  color: white
+  padding: 1vh 3vh
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2vh
+
+.superbold
+  font-family: 'AlfabetBold', sans-serif
+
+.step-tracker
+  text-align: center
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh
+  .step-1
+  .step-2
+  .step-3
+  .step-4
+  .step-5
+    background: #B5B5B5;  
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 50%;
+    padding: 1vh
+    width: 4vh
+    height: 4vh
+    color: white
+    display: inline-block
+  .active
+    border: 2px solid #000000;
+  .past
+    background: #C481B6
+  .step-line
+    height: 2px;
+    width: 40px;
+    background-color: #B5B5B5;
+    float: left;
+    margin: 20px 0px;
+  .step-line-past
+    height: 2px;
+    width: 40px;
+    background-color: #C481B6
+    float: left;
+    margin: 20px 0px;
+
+
+        
+
+.dialog-topic
+  box-sizing: border-box;
+  background: #F1F1F1;
+  padding: 0 
+  border: 0px
+  width: 70%
+  max-width: 512px
+  overflow-y: initial !important
+  .header
+    padding-left: 15px
+    padding-right: 15px
+    border-radius: 10px
+    justify-content: space-between;
+    align-items: center;
+    background: #24436F;
+    display: grid
+    grid-template-columns: 90% 10%
+    span
+      text-align: right;
+      font-family: 'AlfabetBold', sans-serif
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;    
+      color: #FFFFFF;       
+      cursor: pointer
+    h1
+      font-family: 'AlfabetBold', sans-serif
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;    
+      color: #FFFFFF; 
+  .body
+    padding: 5px
+    font-family: 'AlfabetLight', sans-serif
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+    
+    .titulo
+      font-family: 'AlfabetBold', sans-serif
+      text-transform: uppercase
+    .author
+      text-align: right
+    .zona
+      margin-bottom: 20px
+    .contenido 
+      white-space: pre-line;
+
+
+.dialog-votacion
+  box-sizing: border-box;
+
+  background: #FFFFFF;
+  border: 3px solid #C481B6;
+  border-radius: 20px;
+
+  .btn-cancelar
+    font-family: 'AlfabetBold', sans-serif
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #FF6D6D;
+    margin: 2.5%
+
+  .btn-entendido
+    font-family: 'AlfabetBold', sans-serif
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: white
+    background: #24436F;
+    box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 5px;  
+    margin: 2.5%
+
+.votacion-share
+  margin-top: 6vh
+  .share-links
+    margin-top: 5px
+    position: relative
+    .wp
+    .facebook-icon
+    .twitter-icon
+    .linkclipboard-icon
+      background-size: cover
+      background-repeat: no-repeat
+      display: inline-block
+      margin-right: 5px
+      width: 32px
+      height: 32px
+
+    .twitter-icon
+      background-image: unquote("url('ext/lib/site/proyectos/twitter.svg')")
+
+    .facebook-icon
+      background-image: unquote("url('ext/lib/site/proyectos/facebook.svg')")
+
+    .linkclipboard-icon
+      background-image: unquote("url('ext/lib/site/proyectos/linkclipboard.svg')")
+      z-index: 1
+    .wp
+      background-image: unquote("url('ext/lib/site/proyectos/whatsapp.svg')")
+
+
+
+@import './steps/filter-proyectos/styles.styl'
+@import './steps/topic-card/styles.styl'
+  

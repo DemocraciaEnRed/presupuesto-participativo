@@ -1,0 +1,219 @@
+$green = #93c01f
+
+.ext-topic-card
+  font-family: 'AlfabetLight', sans-serif
+  font-size: 17px
+  display: flex
+  flex-direction: column
+  z-index: 0
+  position: relative
+  margin: 10px 15px 20px
+  overflow: hidden
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14)
+  color: inherit
+  transition: all .3s unquote('cubic-bezier(.25,.8,.25,1)')
+  background-color: #fff
+  width: 335px
+  min-height: 460px
+  cursor: pointer
+
+  &:hover
+    box-shadow 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23)
+
+  .topic-card-title
+    margin: 0
+    color: $green
+    font-weight: 700
+    text-transform: uppercase
+    font-family: 'AlfabetLight', sans-serif
+    font-size: 17px
+    display: block;
+    width: 100%
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;   /* required for Opera */
+    -ms-text-overflow: ellipsis;  /* required for IE8, allegedly */
+
+  .topic-card-forum
+    color: $green
+    font-weight: 100
+    font-size: 17px
+
+  .wp
+  .facebook-icon
+  .twitter-icon
+  .linkclipboard-icon
+    background-size: cover
+    background-repeat: no-repeat
+    display: inline-block
+    margin-top: 0
+    margin-right: 3%
+    width: 15px
+    height: 15px
+    @media screen and (min-width: 750px)
+      width: 35px
+      height: 35px
+
+  .twitter-icon
+    background-image: unquote("url('ext/lib/site/carrusel/twitter.svg')")
+
+  .facebook-icon
+    background-image: unquote("url('ext/lib/site/carrusel/facebook.svg')")
+
+  .linkclipboard-icon
+    background-image: unquote("url('ext/lib/site/carrusel/linkclipboard.svg')")
+  .wp
+    background-image: unquote("url('ext/lib/site/carrusel/whatsapp.svg')")
+
+  .budget
+    display: block
+    margin: 0
+    color: white
+    font-weight: 900
+    right: 0
+    position: absolute
+    bottom: 10px
+    font-size: 30px
+    background: #1791be
+    box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12)
+    padding: 2px 20px
+  .winner
+    display: block
+    margin: 0
+    color: #fff
+    font-weight: 900
+    right: 0
+    position: absolute
+    top: 40px
+    font-size: 20px
+    background: #1791be
+    box-shadow: 0 6px 4px -2px rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12)
+    padding: 2px 20px
+  
+  .topic-status
+    position: absolute
+    top: 0
+
+  .topic-card-cover
+    display: block
+    position: relative
+    width: 100%
+    background-size: cover
+    background-position: center
+    background-color: #efefef
+
+    &:after
+      content ''
+      display block
+      padding-top 50%
+
+  .topic-card-info
+    padding: 20px 35px
+    text-align: left
+    display: flex
+    flex-direction: column
+    height: 100%
+  .cont-boton-azul
+    text-align: center
+  .portada
+    background-color: #93c01f
+    height: 210px
+    flex: 0 0 auto
+    overflow: hidden
+    &:before
+      content: ''
+      box-shadow: 0 0 60px 20px #000
+      width: 100%
+      position: absolute
+      bottom: 0
+      left: 0
+
+  .topic-card-description
+    display: flex
+    margin: 1.4em 0 1.2em
+    color: #444
+    font-weight: 300
+    line-height: 1.25
+    font-size: 14px
+    min-height: 60px
+
+    @media screen and (min-width: 750px)
+      font-size: 1rem
+
+    a
+      font-weight: inherit
+      color: inherit
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis
+      word-wrap: break-word
+      max-width: 300ch
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertica
+
+      &:hover
+        text-decoration: none
+
+  .topic-results
+    padding: 12px 15px 9px
+    color: #00adef
+    border-bottom: 1px solid #00adef
+
+  .topic-card-body
+    flex: 1
+
+
+  .topic-card-footer
+    text-align: left
+    width: 100%
+    padding: 0 0 20px
+    .topic-tags
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+      max-height: 2.4em
+      color: #9a3a96
+      font-size: 16px
+      line-height: 1.2em
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;   /* required for Opera */
+      -ms-text-overflow: ellipsis;  /* required for IE8, allegedly */
+      a
+        margin-right: 10px
+        font-weight: normal
+        cursor: pointer
+        &:hover
+          color: #8C1E81
+          text-decoration: underline
+
+
+  .social-links
+    position: relative
+    font-size: 20px
+    display: none
+    div
+      position: relative
+
+    span
+      cursor: pointer
+      margin-right: 7px
+      color: #999
+    h2
+      border-bottom: 3px solid #93c01f
+      font-family: 'AlfabetRegular', sans-serif
+      color: #93c01f
+      padding: 0
+      margin: 0
+      @media screen and (min-width: 769px)
+        font-size: 2rem
+  .row
+    width: 100%
+
+
+@import '../../../node_modules/flickity/css/flickity.css'

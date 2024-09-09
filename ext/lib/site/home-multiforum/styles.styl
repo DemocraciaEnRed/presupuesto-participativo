@@ -1,0 +1,311 @@
+.ext-home-multiforum
+  @import '../jump-button/styles'
+  .section-title
+    display: inline-block
+    margin: 0 0 1em
+    padding: 8px 10px
+    font-size: 14px
+    color: #fff
+    font-weight: 400
+    background-color: #f7941d
+
+  .section-subtitle
+    margin-top: 0
+    font-size: 24px
+    font-weight: 400
+    color: #4f5353
+
+  .ext-home-cover
+    display: flex
+    align-items: center
+    min-height: 70vh
+    padding: 15px 0
+    color: #fff
+    text-align: center
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    position: relative
+    z-index: 0
+
+    h2
+      font-size: 2em
+      margin: 0 0 1em
+      text-shadow: 2px 2px 4px rgba(81,81,81,0.8)
+
+    h1
+      font-size: 3em
+      margin: 0 0 1em
+      text-shadow: 2px 2px 4px rgba(81,81,81,0.8)
+
+    .call-to-action
+      background: #00adef
+      color: #fff
+
+    .container
+      z-index: 10
+
+    .banner
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      align-items: center
+      justify-content: center
+      pointer-events: none
+      z-index: 5
+
+      @media screen and (min-width: 768px)
+        display: flex
+
+    .video
+      width: 100%
+      position: relative
+      height: 100%
+      overflow: hidden
+      display: flex
+      justify-content: center
+      align-items: center
+
+      video
+        width: 100%
+        min-width: 1000px
+        z-index: -1
+
+  .info-landing
+    .col-md-4
+      p
+        text-align: center
+    @media (max-width: 768px)
+      .row.cont.fondo-rosa
+        padding-top: 0
+
+  .intro
+    padding: 0 0 200px
+    background-image: unquote("url('/ext/lib/site/home-multiforum/city@3x.png')")
+    background-repeat: repeat-x
+    background-position: bottom
+    background-size: auto 200px
+
+    .col-md-6
+      padding-top: 50px
+      padding-bottom: 50px
+
+    .light-text
+      color: #757575
+      font-size: 1.1em
+
+      strong
+        color: #F59231
+
+      &:last-of-type
+        margin-bottom: 1.5rem
+
+    .mas-info
+      margin-bottom: 20px
+    .video-container
+      display: flex
+      align-items: center
+      justify-content: center
+      padding-top: 0
+      .video
+        width: 100%
+        position: relative
+        &::before
+          content: ""
+          display: block
+          padding-top: 56.25%
+        iframe
+          border: none
+          position: absolute
+          top: 0
+          width: 100%
+          height: 100%
+  .info
+    background: #00adef
+    color: #fff
+    margin-top: -20px
+    padding: 50px 0
+    .col-md-6
+      padding-top: 50
+    h2
+      margin-top: 0
+    p
+      font-size: 19px
+      font-weight: 100
+    .proyectos-stats
+      margin: 0
+      padding: 5px 0 10px 0
+      list-style: none
+      li
+        text-align: center
+        display: inline-block
+        margin-right: 50px
+        .img
+          height: 74px
+          background-repeat: no-repeat
+          background-position: center
+          background-size: auto 50px
+          padding-bottom: 5px
+        span
+          display: block
+        .num
+          font-size: 26px
+          font-weight: 600
+        p
+          font-size: 15px
+      li:nth-child(1)
+        .img
+          background-image: unquote("url('/ext/lib/site/home-multiforum/icon-1@3x.png')")
+      li:nth-child(2)
+        .img
+          background-image: unquote("url('/ext/lib/site/home-multiforum/icon-2@3x.png')")
+      li:nth-child(3)
+        .img
+          background-size: auto 70px
+          background-image: unquote("url('/ext/lib/site/home-multiforum/icon-3@3x.png')")
+    .ver-mas
+      color: #00adef
+      font-weight: bold
+      background: #f3f3f3
+
+    .linea-tiempo
+      display: flex
+      justify-content: center
+
+      ul
+        padding: 0
+        margin: 0
+        list-style: none
+
+      li
+        border-left: 7px solid #fff
+        padding: 40px 17px 30px
+        position: relative
+
+        &:last-child
+          border-left: none
+          margin-left: 7px
+
+        &::before
+          content: " "
+          width: 22px
+          height: 22px
+          background: #fff
+          position: absolute
+          border-radius: 50%
+          left: -15px
+          top: -1px
+
+        h4
+          background: #525252
+          display: inline
+          padding: 5px 10px
+          font-weight: 100
+          position: absolute
+          margin-left: 15px
+          top: -29px
+          left: 20px
+          font-size: 19px
+
+          &::before
+            content: " "
+            width: 0
+            height: 0
+            top: 6px
+            left: -6px
+            border-style: solid
+            position: absolute
+            border-width: 7px 7px 7px 0
+            border-color: transparent #525252 transparent transparent
+
+        span
+          display: block
+
+      .highlighted
+        h4
+          background: #f7941d
+          &::before
+            border-color: transparent #f7941d transparent transparent
+
+  .seccion-barrios
+    font-family: 'AlfabetRegular', sans-serif
+    width: 100%
+    display: -webkit-flex
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 30px
+    h2
+    h3
+      font-weight: 500
+    .row
+      width: 100%
+    .cont-barrio
+      margin-top: 3%
+      text-align: center
+    .barrio-verde
+      display: block
+      // background-color: #7cbb42
+      text-align: center
+      // width: 33%
+      // margin: 3% 0 0 33%
+      color: white
+      // box-shadow: 0 6px 4px -2px unquote("rgba(0, 0, 0, 0.24)"), 0 0 2px 0 unquote("rgba(0, 0, 0, 0.12)")
+
+      // Prueba de linea verde
+      border-bottom: 3px solid #93c01f
+      h2
+        color: #93c01f
+        padding: 0
+        margin: 0
+        font-size: 8vw
+        @media screen and (min-width: 750px)
+          font-size: 4rem
+
+  .thumbs.info-landing 
+    padding-bottom: 100px
+    background-repeat: no-repeat;
+    background-position: right 0px bottom -450px;
+    background-size: contain;
+    @media (max-width: 500px)
+      background-position: right 0px bottom -90px;
+      padding-bottom: 250px
+
+  .banner-ideas
+    background-color: #f3f3f3;
+    padding: 50px 20px
+    text-align: center
+    p
+      color: #4b3c59;
+      font-size: 30px;
+      margin: 20px auto;
+      max-width: 50%;
+      line-height: 1.25;
+      @media (max-width: 600px)
+        max-width: 80%
+        font-size: 25px;
+    img 
+      width: 110px
+    .boton-foro
+      font-family: 'AlfabetLight', sans-serif
+      border: 2px solid #C481B6;
+      border-radius: 5px;
+      box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);      
+      color: #C481B6;
+      padding: 15px 30px
+      display: inline-block
+      margin: 10px
+    .boton-votacion
+      font-family: 'AlfabetLight', sans-serif
+      border-radius: 5px;
+      border: 3px solid #C481B6;
+      background: #C481B6;
+      box-shadow: 0px 4px 4px 0px rgba(255, 255, 255, 0.25);      
+      color: white
+      padding: 15px 30px
+      display: inline-block
+      margin: 10px
+*:focus
+  outline: 1px solid

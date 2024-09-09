@@ -1,0 +1,38 @@
+.pagination
+  display: flex
+  justify-content: center
+  position: absolute
+  right: 0
+  left: 0
+  bottom: 10
+  .pagination-container
+    background-color: rgba(0,0,0,0.7)
+    border-radius: 2px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 3px
+    @media screen and (max-width: 570px)
+      font-size:13px
+    .btn-pagination
+      background: none
+      border: none
+      color: #FFF
+      cursor: pointer
+      padding: 5px 5px
+      &:hover
+        background: rgb(105,105,105, 0.2)
+      &:disabled
+        color: #676767
+        cursor: not-allowed
+        background: none
+    .page-counter
+      margin: 0 20px
+      color: #FFF
+      font-size: 14px
+      padding: 5px 0px
+
+.pdf-container
+  display: flex;
+  justify-content: center;
+  align-items: center;    

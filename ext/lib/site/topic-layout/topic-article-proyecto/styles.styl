@@ -1,0 +1,194 @@
+.topic-article-wrapper
+  padding-top: 0em
+  width: 100%
+
+  @import './admin-actions/styles'
+  @import './header/styles'
+  @import './content/styles'
+  @import './footer/styles'
+  @import './vote/styles'
+  @import './poll/styles'
+  @import './cause/styles'
+  @import './social/styles'
+  @import './comments/styles'
+  @import './subscribe/styles'
+  .cover
+    width: 100%
+    height: 280px !important
+    background-size: cover
+    background-position: center
+  hr
+    font-size 15px
+    margin 35px 0 30px
+    height auto
+    border 0
+    line-height 0
+    text-align center
+    letter-spacing 8px
+    color #444
+
+    &:after
+      content '· · ·'
+
+.topic-overlay
+  position fixed
+  top 0
+  right 0
+  width 100%
+  height 100%
+  z-index 1
+  background rgba(0,0,0,0.5)
+
+  @media screen and (min-width 701px)
+    display none
+
+.topic-article-content
+  max-width 848px
+  margin 0 auto
+  padding-left 15px
+  padding-right 15px
+  &.entry-content
+    font-family: 'AlfabetLight', sans-serif!important
+    font-size: 20px;
+    font-weight: 100;
+    color: #696969;
+  &.topic-tags
+    color: #9a3a96
+    font-weight: 100
+    margin: 30px auto
+    font-size: 20px
+    a
+      margin-right: 10px
+  &.topic-admin-actions
+    position: relative !important;
+
+.votar-este
+  text-align: center
+  background: #e3e3e3
+  color: #555!important
+  padding: 20px 60px
+  box-shadow: 0 3px 10px -2px #555
+  border-radius: 2px
+  margin-bottom: 20px
+  @media screen and (max-width: 500px)
+    padding: 20px 0
+    p
+      padding: 0 5px
+  p
+    font-size: 18px
+    margin: 20px auto
+    max-width: 440px
+  a
+    border: none
+    @media screen and (max-width: 500px)
+      font-size: 16px
+  a:hover
+    color: #fff
+    text-decoration: none
+
+.embed-container
+  position relative
+  padding-bottom 56.25%
+  height 0
+  overflow hidden
+  max-width 100%
+
+  iframe
+  object
+  embed
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    border none
+
+.no-topics
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 100%
+    button
+      margin-top 20px
+    p
+      color #888
+
+topicBoxSize = 15
+topicColor = #333
+topicColor2 = #999
+
+.loader-wrapper
+  position relative
+  flex 1
+
+  .topic-loader
+    position absolute
+    left 50%
+    top 50%
+    border-radius 100%
+    width topicBoxSize * 1px
+    height topicBoxSize * 1px
+    box-shadow topicBoxSize*1px topicBoxSize*1px topicColor2,
+    topicBoxSize*-1px topicBoxSize*1px topicColor,
+    topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+    topicBoxSize*1px topicBoxSize*-1px topicColor
+    animation topic-loader-spin ease infinite 4s
+    transition-property opacity
+
+    @-webkit-keyframes topic-loader-spin {
+      0%,
+      100% {
+        box-shadow: topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor
+      }
+
+      25% {
+        box-shadow: topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2
+      }
+
+      50% {
+        box-shadow: topicBoxSize*-1px topicBoxSize*-1px topicColor2,
+        topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor
+      }
+
+      75% {
+        box-shadow: topicBoxSize*1px topicBoxSize*-1px topicColor,
+        topicBoxSize*1px topicBoxSize*1px topicColor2,
+        topicBoxSize*-1px topicBoxSize*1px topicColor,
+        topicBoxSize*-1px topicBoxSize*-1px topicColor2
+      }
+    }
+  .topic-article-status-container
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+.container-project-admin-actions
+  max-width 848px
+  margin 0 auto
+  padding-left 15px
+  padding-right 15px
+
+.topic-album-wrapper 
+  background-color: #f9f9f9
+  padding: 20px 0;
+.topic-album 
+  max-width 848px
+  margin 0 auto
+  padding-left 15px
+  padding-right 15px 
+  text-align: center
+  a
+    display: inline-block
+    margin: 5px
+    width: 250px
+    @media (max-width: 500px) 
+      width: 45%

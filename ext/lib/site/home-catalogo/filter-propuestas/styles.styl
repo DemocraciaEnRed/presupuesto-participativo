@@ -1,0 +1,142 @@
+#filter-propuestas
+  @import './badges/styles.styl'
+
+  margin-left:1.5em
+  margin: 60px auto
+  @media screen and (max-width: 570px)
+    margin-left:0.6em
+  @media screen and (max-width: 992px)
+    margin-bottom: 20px
+  margin-right:1em
+  width: 96%
+  text-align: center
+
+  .stage-container
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    a.stage-changer
+      color: rgb(24, 145, 190)
+      margin-bottom: 20px
+      cursor: pointer
+    a.stage-changer:hover
+      color: #8c1e81
+
+  .winners-label
+    background-color: #7cbb42
+    color: white
+    text-align: center
+    padding: 15px 20px
+    display: inline-block
+    text-transform: uppercase
+    font-weight: 800
+    max-width: 90%
+
+  .filters-nav
+    width: 100%
+    max-width: 1000px
+    display: flex
+    justify-content: space-between
+    margin-bottom: 0
+    @media screen and (max-width: 992px)
+      flex-direction:column
+      align-items:center
+    &.center
+      justify-content: center
+    .button-container
+      position: relative
+      text-align: left
+      &:focus
+        outline: 1px solid #333
+      .dropdown-button
+        width: 300px
+        @media screen and (min-width: 570px)
+          width: 400px
+        @media screen and (min-width: 992px)
+          width: 252px
+        @media screen and (min-width: 1200px)
+          width: 302px
+        height: 45px
+        border-radius: 2px
+        border: solid 1px rgba(153, 153, 153, 0.14)
+        background: #FFF
+        display: flex
+        align-items: center;
+        justify-content: space-between
+        padding-left: 20px
+        padding-right: 20px
+        cursor: pointer
+        .button-label
+          font-family: 'AlfabetLight', sans-serif
+          font-size: 16px
+          font-weight: bold;
+          color: #000
+          &.active
+            color: #C481B6
+        .badge
+          font-family: 'Lato', sans-serif
+          font-size: 14px
+          color: #FFF
+          background-color: #C481B6
+          border-radius: 100%
+          margin-left: 7px
+          padding: .25em .5em
+        .caret-down
+          width: 12px
+          height: 6px
+          color: #999999
+          margin-top: -20px;
+
+      .dropdown-options
+        position: absolute
+        padding: 0px 15px 14px 20px
+        margin-top: 0
+        width: 300px
+        @media screen and (min-width: 570px)
+          width: 400px
+        @media screen and (min-width: 992px)
+          width: 252px
+          margin-top: 14px
+        @media screen and (min-width: 1200px)
+          width: 302px
+        border-radius: 9px
+        background-color: #ffffff
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.14)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        z-index: 10
+        .options-container
+          width: 100%
+          display: flex
+          flex-wrap: wrap
+          flex-direction: column
+          .option-label
+            width: 100%
+            position: relative;
+            font-family: 'Lato', sans-serif
+            font-size: 16px
+            font-weight: 300
+            margin-top: 10px
+            margin-bottom: 0
+            input
+              position: absolute;
+              /*top: 3px;*/
+            .checkbox-label
+              margin-left: 25px
+              display: block;
+              word-wrap: anywhere;
+
+        .clear-filters
+          background: none
+          border: 0px
+          margin-left: 0
+          align-self: flex-end
+          span
+            font-family: 'Lato', sans-serif
+            font-size: 12px
+            color: #00adb7
+            text-decoration: underline
+            cursor: pointer
+            &:hover
+              color: #8c1e81

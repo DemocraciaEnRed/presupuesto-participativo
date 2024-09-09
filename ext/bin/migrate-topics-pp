@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+const models = require('lib/models')()
+const ObjectID = require('mongodb').ObjectID
+
+const Topic = models.Topic
+
+Topic.find({}).exec()
+.then((topics) => Promise.all(topics.map((topic) => {
+  topic.set('attrs.state', 'pendiente')
+  return topic.save()
+})))
+.then(() => {
+  console.log('Listo! Proyectos PP actualizados.')
+  process.exit(0)
+})
+.catch((err) => {
+  console.error(err)
+  process.exit(1)
+})

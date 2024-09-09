@@ -1,0 +1,134 @@
+.ext-home-ideas
+  @import './*/**/styles'
+  &.user-logged
+    @media (max-width: 400px)
+      margin-top: 140px
+  button
+    border: none
+    margin-right: .5em
+
+  .search-proyecto-wrapper
+    margin: 30px 0
+    display: flex;
+    .search-proyecto-select
+      width: 100%
+    button
+      width: 150px;
+      &[disabled]
+        cursor: not-allowed;
+        color: #777;
+
+  .more-topics
+    width: 100%
+    padding: 0 0 20px 0
+    text-align: center
+    button
+      cursor: pointer
+      margin: 6px
+      width: 180px
+      border-radius: 5px
+      padding: 0.8rem
+      background-color: #099dc3
+      color: #fff
+      border: none
+      font-size: 20px
+      text-transform: uppercase
+
+  .notice
+    h1
+      margin: 0;
+      font-size: 1.25rem;
+      padding: 0
+    margin: -1.5em auto 0em
+    padding: 15px 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #24436F
+    color: white
+    text-align: center;
+    z-index: 1;
+    max-width: 80%;  
+    font-family: 'AlfabetLight', sans-serif
+
+  .alert-duedate
+    display: block
+    float:left
+    font-size: 0.9em
+    color: #666
+    margin: 15px
+    font-style: italic
+    max-width: 345px
+    @media screen and (min-width: 600px)
+      padding-top:30px
+
+  .topics-container
+    padding-bottom: 200px;
+    background-size: contain;
+    @media (max-width: 980px)
+      background-position: right 0px bottom -80px;
+      padding-bottom: 160px
+    @media (max-width: 650px)
+      background-position: right 0px bottom -50px;
+      padding-bottom: 100px
+    @media (max-width: 400px)
+      background-position: right 0px bottom -40px;
+
+  .topics-title
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 60px
+    color: #000
+    margin-top: 0
+    display: inline-block
+    @media (max-width: 500px)
+      margin-bottom: 20px
+  .topics-filters
+    float: right;
+    .topics-filter
+      display: inline-block;
+      float: right;
+      &.topics-state-filter
+        margin-bottom: 5px
+      &.topics-sort-filter
+        clear: both;
+      @media (max-width: 500px)
+        float: none
+        margin-bottom: 20px
+        span
+          margin-bottom: 10px
+          display: block
+      span
+        font-size: 14px;
+        font-weight: 600;
+        color: #000
+        margin-right: 10px
+      .btn-sort-filter
+        color: #24436F;
+        font-size: 12px
+        font-family: 'AlfabetBold', sans-serif
+        font-weight: 500
+        padding: 6px 14px
+        border: solid 1px #24436F;
+        margin: 0
+        border-top-right-radius: 2px
+        border-bottom-right-radius: 2px
+        background-color: white
+        .glyphicon
+          display: none
+        &:first-of-type
+          border-right: none
+          border-top-right-radius: 0
+          border-bottom-right-radius: 0
+          border-top-left-radius: 2px
+          border-bottom-left-radius: 2px
+        &.active
+          background-color: #24436F;
+          color: #fff;
+          font-weight: bold
+          .glyphicon
+            display: inline
+            display: inline;
+            margin-right: 5px;
+            color: #fff;
+            font-size: 12px

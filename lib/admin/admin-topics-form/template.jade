@@ -1,0 +1,81 @@
+- function te (str) { return t(str) !== str }
+
+#topic-wrapper(class=forum.visibility === 'collaborative' && !forum.privileges.canChangeTopics ? 'collaborative' : '')
+  - if (tags.length === 0)
+    if (user.staff)
+      p.alert.alert-danger.text-center
+        != t('admin-topics-form.alert.no-tags')
+      p.text-center
+        a.btn.btn-lg.btn-primary.create-tag(href=urlBuilder.for('admin.tags.create', {forum: forum.name}))
+          = t('admin-tags-form.title.create')
+    else
+      p.alert.alert-danger.text-center
+        = t('admin-topics-form.alert.no-tags.no-staff')
+  - else
+    h2
+      = t(form.title)
+      - if (form.type === 'edit')
+        a(class='btn btn-link btn-md', href='/propuestas/topic/'+topic.id, target='_blank')
+          = t('admin-topics-form.title.preview')
+          | &nbsp;
+          i.icon-eye
+    include commands
+    h3.subtitle
+      = "1. Idea original"
+    .topic-admin
+      form(action=form.action, method=form.method, role='form', autocomplete='off', novalidate, autovalidate='autovalidate', autosubmit='autosubmit')
+        - if (topic.privileges && !topic.privileges.canEdit)
+          .block-overlay
+        - if (form.forum)
+          input(type='hidden', name='forum', value=form.forum)
+        input(type='hidden', name='admin-comment-original', value=topic.attrs && topic.attrs['admin-comment'])
+        ul.form-messages
+
+        .form-group
+          label#anchor-title= t('admin-topics-form.label.mediaTitle')
+          - if (te('admin-topics-form.description.mediaTitle'))
+            span.help-text= t('admin-topics-form.description.mediaTitle')
+          input.form-control(type='text', maxlength='200', id='mediaTitle', name='mediaTitle', placeholder=t('admin-topics-form.label.mediaTitle'), value=topic.mediaTitle, validate='required')
+
+        .form-group
+          label= 'Eje'
+          - if (te('admin-topics-form.description.tag'))
+            span.help-text= t('admin-topics-form.description.tag')
+          select.form-control(name='tag', validate='required')
+            - var topicTag = typeof topic.tag === 'string' ? topic.tag : (topic.tag && topic.tag.id)
+            - each tag in tags
+              option(selected=tag.id === topicTag, value=tag.id)
+                = tag.name
+
+        //- .form-group
+        //-   label= 'Tema'
+        //-   span.help-text= 'Solo se admite UN tema precargado. Escribí las primeras dos letras y se te sugerirán temas.'
+        //-   div.tags-autocomplete
+        //-   - if (forum.initialTags && forum.initialTags.length > 0)
+        //-     span.help-text= t('admin-topics-form.description.forum-tags')
+        //-     - each tag in forum.initialTags
+        //-       button.btn.btn-default.btn-sm.forum-tag(data-value=tag, type='button', disabled=(topic.tags && !!~topic.tags.indexOf(tag)))= tag
+
+        .form-group
+          label= 'Zona'
+          select.form-control(name='zona', validate='required')
+            - var topicZona = typeof topic.zona === 'string' ? topic.zona : (topic.zona && topic.zona.id)
+            - each zona in zonas
+              option(selected=zona.id === topicZona, value=zona.id)
+                = zona.nombre
+
+        - if (forum.topicsAttrs.length > 0)
+          fieldset.attrs-wrapper
+            div(data-attrs)
+        
+        hr
+        h3.subtitle
+          = "Album de fotos"
+        p="Para ir editar el album de fotos, haga clic en el siguiente link (Antes, guarde los cambios de esta página)"
+        a(href=urlBuilder.for('admin.topics.id.album', {id: topic.id, forum: forum.name}), target='_blank')
+          = "Editar album de fotos"
+        
+
+        input.btn.btn-success.hide(type='submit', value=t('admin-topics-form.button.submit'))
+
+    include commands

@@ -1,0 +1,28 @@
+{
+	"jwtSecret": "dejame_configurado_sino_se_deslogea_en_cada_restart",
+	"publicPort": 3000,
+	"multiForum": true,
+	"locale": "es",
+	"enforceLocale": true,
+  "notifications": {
+    "nodemailer": {
+			"host": "smtp.mailgun.org",
+			"port": 465,
+			"secure": true,
+			"auth": {
+				"user": "CUENTA_123",
+				"pass": "CONTRA_123"
+			}
+		}
+  },
+	"staff": ["it@democracyos.org"],
+	"forumProyectos": "proyectos",
+	"headerBackgroundColor":"#ffffff",
+	"header_font_color":"#4a4949",
+	"logo":"/ext/lib/boot/logo.png",
+  "adminMail": "it@democracyos.org",
+  "adminPass": "123123",
+  "propuestasAbiertas": true,
+  "propuestasTextoAbiertas": "A partir del 19 de Marzo vas a poder subir propuestas",
+  "propuestasTextoCerradas": "Estas viendo propuestas presentadas en el Presupuesto Participativo 2019"
+}

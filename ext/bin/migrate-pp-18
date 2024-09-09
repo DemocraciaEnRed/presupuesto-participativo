@@ -1,0 +1,5 @@
+#!/bin/bash
+node ./ext/bin/migrate-pp
+node ./ext/bin/migrate-attrs-anio
+node ./ext/bin/migrate-pp-budget
+

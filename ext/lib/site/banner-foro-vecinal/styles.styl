@@ -1,0 +1,88 @@
+.banner-fv
+  padding: 0
+  position: relative;
+  margin-bottom: 50px;
+  @media(min-width: 2100px)
+    width: 2100px
+  @media screen and (min-width: 620px)
+    margin-bottom: 30px
+
+  .banner
+    width: 100%
+    display: block
+    margin: 0 auto
+    @media(max-width: 500px)
+      /* fix: por algún motivo aparece un línea negrita arriba en celus*/
+      margin-top: -2px;
+    //height: 416px
+    height: 360px
+    background-size: cover
+    background-repeat: no-repeat
+    background-color: #24436F
+    padding: 0
+    overflow: hidden
+    @media(min-width: 2100px)
+      width: 2100px
+    @media(min-width: 913px)
+      height: 280px
+    @media(max-width: 912px)
+      height: 250px
+    @media(max-width: 788px)
+      height: 230px
+    @media(max-width: 697px)
+      height: 210px
+    @media(max-width: 637px)
+      height: 125px
+    @media(max-width: 500px)
+      height: 101px
+    & video
+      width: 100%
+      //muevo verticalmente un poco el video para que no corte tantas caras
+      position: relative;
+      top: 10%;
+      transform: translateY(-27%);
+      @media(min-width: 2100px)
+        width: 2100px
+        margin: 0
+  .contenedor
+    bottom: -30px
+    @media(max-width: 768px)
+      bottom: -34px
+    @media(max-width: 768px)
+      bottom: -30px
+    position: absolute
+    display: block
+    text-align: center
+    left: 0
+    right: 0
+
+    .fondo-titulo
+      display: inline-flex
+      font-family: 'AlfabetLight', sans-serif
+      justify-content: center
+      align-items: center
+      background-color: #24436F
+      color: white
+      text-align: center
+      margin: 0 auto
+      padding: 15px 40px 9px
+      letter-spacing: 1px
+      @media(min-width: 769px)
+        padding: 15px 55px 9px
+      @media(max-width: 768px)
+        padding: 15px 20px 9px
+        h1
+          font-size: 40px
+          line-height: 0.9
+          @media(max-width: 500px)
+            font-size: 32px
+    h1
+      font-family: AlfabetLight
+      padding: 0
+      margin: 0 auto
+      font-size: 30px
+      font-weight: 600
+      text-transform: uppercase
+
+.fondo-rosa
+  background-color: #C481B6

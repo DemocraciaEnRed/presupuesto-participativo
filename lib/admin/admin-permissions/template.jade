@@ -1,0 +1,15 @@
+.admin-permissions
+  .loader.view-loader
+  h2= t('admin-permissions.roles.title')
+  .admin-permissions-lists
+  h2= t('admin-permissions.visibility.title')
+  each visibility in visibilities
+    .radio
+      label
+        input(type="radio",
+              name="visibility",
+              value=visibility,
+              disabled=true,
+              checked=forum.visibility === visibility)
+        = t('admin-permissions.visibility.'+visibility+'.title')
+        p.help-block= t('admin-permissions.visibility.'+visibility+'.description')

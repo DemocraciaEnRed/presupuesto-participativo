@@ -1,0 +1,331 @@
+#topics-wrapper
+  .topics-admin
+    .password-settings
+      .heading
+        //- .circle
+        //-   i.icon-lock
+        //-  h2= 'Padron'
+        //- h3= 'Buscar por DNI'
+        //- .form-group
+        //-   label= 'Busque por DNI nuevo'
+        //-   input.form-control(
+        //-     type='text',
+        //-     data-name='busqueda-dni',
+        //-     validate='required'
+        //-   )
+        //- .form-group
+        //-   button.btn.btn-primary.buscar-dni-button= 'Buscar'
+        //- pre#response-dni='Ingrese un DNI para buscar su informacion'
+        //- h4= 'Referencia Zonas'
+        //- pre
+        //-   - each zona in zonas
+        //-     div ID: #{zona.value} - Zona #{zona.name}
+        //- hr
+        //- h3= 'Agregar al padron'
+        //- .form-group
+        //-   label= 'Ingrese el DNI nuevo'
+        //-   input.form-control(
+        //-     type='text',
+        //-     data-name='new-dni',
+        //-     validate='required'
+        //-   )
+        //- //- .form-group
+        //- //-   label= 'Elija la escuela'
+        //- //-   select.form-control(data-name='new-escuela', validate='required')
+        //- //-     option(selected, disabled, value="")='- Elija una escuela -'
+        //- //-     - each escuela in escuelas
+        //- //-       option(value=escuela.value)
+        //- //-         = escuela.name
+        //- .form-group
+        //-   button.btn.btn-primary.new-padron-button= 'Ingresar al padrón'
+        //- #success-new-dni.alert.alert-success(hidden=true)='Exito! Agregado al padron'        
+        //- #error-new-dni.alert.alert-danger(hidden=true)='Exito! Agregado al padron'        
+        //- hr
+        h2= 'Contenido Portada'
+      form.form(action='/api/text', method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
+        ul.form-messages
+        .panelExpandible
+          h3.titleShow= 'Contenido Portada'
+            span.glyphicon.glyphicon-menu-down.pull-right
+          .showHiden.hiden
+            .contentHiden
+              h5= 'Títulos'
+              .form-group
+                label= 'Título principal'
+                input.form-control(
+                  type='text',
+                  data-name='home-title',
+                  maxlength=100,
+                  validate='required'
+                )
+              .form-group
+                label= 'Subtítulo principal'
+                input.form-control(
+                  type='text',
+                  data-name='home-subtitle',
+                  maxlength=50,
+                  validate='required'
+                )
+              .form-group
+                label= 'Texto subtítulo principal'
+                textarea.form-control(
+                  data-name='home-subtitle-text',
+                  rows=5,
+                  maxlength=400,
+                  validate='required'
+                )
+
+              h5= 'Videos de fondo'
+              .form-group
+                span.help-text= 'Cuando un usuario entra a la página se le muestra aleatoriamente uno de los dos posibles videos.'
+                span.help-text= 'El formato .webm es para celulares y el .mp4 para dispositivos más grandes.'
+              .form-group
+                label= 'Video (posibilidad 1)'
+                h6= 'Formato mp4:'
+                input.form-control(
+                  type='text',
+                  data-name='home-video1-mp4',
+                  maxlength=200,
+                  validate='required url'
+                )
+                h6= 'Formato webm:'
+                input.form-control(
+                  type='text',
+                  data-name='home-video1-webm',
+                  maxlength=200,
+                  validate='required url'
+                )
+              .form-group
+                label= 'Video (posibilidad 2)'
+                h6= 'Formato mp4:'
+                input.form-control(
+                  type='text',
+                  data-name='home-video2-mp4',
+                  maxlength=200,
+                  validate='url'
+                )
+                h6= 'Formato webm:'
+                input.form-control(
+                  type='text',
+                  data-name='home-video2-webm',
+                  maxlength=200,
+                  validate='url'
+                )
+
+              h5= 'Íconos explicativos'
+              span.help-text= 'Las imágenes se acomodan a un tamaño de 200 x 200 píxeles'
+              .form-group
+                label= 'Ícono 1'
+                h6= 'Imagen:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono1-imagen',
+                  maxlength=200,
+                  validate='required url'
+                )
+                h6= 'Título:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono1-titulo',
+                  maxlength=200,
+                  validate='required'
+                )
+                h6= 'Texto:'
+                textarea.form-control(
+                  data-name='home-icono1-texto',
+                  rows=5,
+                  maxlength=800,
+                  validate='required'
+                )
+              .form-group
+                label= 'Ícono 2'
+                h6= 'Imagen:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono2-imagen',
+                  maxlength=200,
+                  validate='required url'
+                )
+                h6= 'Título:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono2-titulo',
+                  maxlength=200,
+                  validate='required'
+                )
+                h6= 'Texto:'
+                textarea.form-control(
+                  data-name='home-icono2-texto',
+                  rows=5,
+                  maxlength=800,
+                  validate='required'
+                )
+              .form-group
+                label= 'Ícono 3'
+                h6= 'Imagen:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono3-imagen',
+                  maxlength=200,
+                  validate='required url'
+                )
+                h6= 'Título:'
+                input.form-control(
+                  type='text',
+                  data-name='home-icono3-titulo',
+                  maxlength=200,
+                  validate='required'
+                )
+                h6= 'Texto:'
+                textarea.form-control(
+                  data-name='home-icono3-texto',
+                  rows=5,
+                  maxlength=800,
+                  validate='required'
+                )
+              .form-group
+                label= 'Banner al fondo de la página'
+                h6= 'Imagen:'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-image',
+                  maxlength=200,
+                  validate='url'
+                )
+                h6= 'Título:'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-title',
+                  maxlength=200,
+                  validate='required'
+                )
+                h6= 'Botón 1 (Texto):'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-button1-text',
+                  maxlength=100,
+                )
+                h6= 'Botón 1 (Link):'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-button1-link',
+                  maxlength=500,
+                  validate='required'
+                )
+                h6= 'Botón 2 (Texto):'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-button2-text',
+                  maxlength=100,
+                )
+                h6= 'Botón 2 (Link):'
+                input.form-control(
+                  type='text',
+                  data-name='home-banner-button2-link',
+                  maxlength=500,
+                  validate='required'
+                )
+              .form-group
+                label= 'Banner encuentros'
+                h6= 'Título:'
+                input.form-control(
+                  type='text',
+                  data-name='home-encuentro-title',
+                  maxlength=200,
+                  validate='required'
+                )
+                h6= 'Subtítulo'
+                input.form-control(
+                  type='text',
+                  data-name='home-encuentro-subtitle',
+                  maxlength=100,
+                  validate='required'
+                )
+        .panelExpandible
+          h3.titleShow= 'Ideas y proyectos'
+            span.glyphicon.glyphicon-menu-down.pull-right
+          .showHiden.hiden
+            .contentHiden
+              h5= 'Títulos'
+              .form-group
+                label= 'Título principal'
+                input.form-control(
+                  type='text',
+                  data-name='idea-title',
+                  maxlength=50,
+                  validate='required'
+                )
+              .form-group
+                label= 'Subtítulo principal'
+                input.form-control(
+                  type='text',
+                  data-name='idea-subtitle',
+                  maxlength=100,
+                  validate='required'
+                )
+        .panelExpandible
+          h3.titleShow= 'Archivo'
+            span.glyphicon.glyphicon-menu-down.pull-right
+          .showHiden.hiden
+            .contentHiden
+              h5= 'Títulos'
+              .form-group
+                label= 'Título principal'
+                input.form-control(
+                  type='text',
+                  data-name='archivo-title',
+                  maxlength=50,
+                  validate='required'
+                )
+              .form-group
+                label= 'Subtítulo principal'
+                input.form-control(
+                  type='text',
+                  data-name='archivo-subtitle',
+                  maxlength=100,
+                  validate='required'
+                )
+        .panelExpandible
+          h3.titleShow= 'Votación'
+            span.glyphicon.glyphicon-menu-down.pull-right
+          .showHiden.hiden
+            .contentHiden
+              h5= 'Títulos'
+              .form-group
+                label= 'Título principal'
+                input.form-control(
+                  type='text',
+                  data-name='votacion-title',
+                  maxlength=100,
+                  validate='required'
+                )
+              .form-group
+                label= 'Subtítulo principal'
+                input.form-control(
+                  type='text',
+                  data-name='votacion-subtitle',
+                  maxlength=200,
+                  validate='required'
+                )
+              .form-group
+                label= 'Reglamento'
+                input.textArea.form-control(
+                  type='text',
+                  data-name='votacion-steps',
+                  maxlength=800,
+                  validate='required'
+                )
+        .panelExpandible
+          h3.titleShow= 'footer'
+            span.glyphicon.glyphicon-menu-down.pull-right
+          .showHiden.hiden
+            .contentHiden
+              .form-group
+                label= 'Información de contacto'
+                input.textArea.form-control(
+                  type='text',
+                  data-name='footer-info',
+                  maxlength=800,
+                  validate='required'
+                )
+        .form-group: button.btn.btn-success.btn-block.btn-lg.button-save= t('settings.save')

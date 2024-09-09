@@ -1,0 +1,139 @@
+.topic-article-header
+  position topic
+  bottom: 0
+  padding-top: 0 !important;
+  // padding-top: 0
+  // margin: 0px auto 20px
+
+
+  h4
+    text-align center
+    margin 35px 0 0 0
+    text-transform uppercase
+    font-size 11px
+
+  h2.author
+    color #666
+    font-size 18px
+    font-weight normal
+    margin 1em 0 0
+
+  .meta-information
+    margin-bottom 10px
+    color #666
+    font-size 16px
+
+    .icon-clock
+      margin-right 6px
+      font-size 13px
+
+    .meta-timeago,
+    .meta-timeago-label
+      display inline-block
+
+    .label
+      display inline-block
+      margin-right 10px
+      border-radius 0
+
+  .topic-tags
+    margin: 0
+    a
+      background: #a5a5a5
+      padding: 0px 8px 1px
+      margin: 5px 5px 0 0
+      display: inline-block
+      border-radius: 10px
+      color: #fff
+      font-size: 12px
+      font-weight: 400
+      &:hover
+        text-decoration: none
+@media screen and (max-width: 1157px)
+  .entry-tag
+    display none
+
+
+
+// BANNER PAGINAS ESTATICAS
+
+.banner-topic
+  padding: 0
+  height: 200px
+  position: relative
+  .banner
+    width: 100%
+    display: block
+    margin: 0 auto
+    height: 180px
+    background-size: cover
+    background-image: unquote("url('ext/lib/site/formulario-propuesta/fondo-formulario-propuestas.svg')")
+    background-color: #C481B6
+    background-repeat: no-repeat
+    background-position: center;
+    background-size: 100%
+    padding: 0
+    &.gradient
+        background-image: linear-gradient(to right, #0099c3, #8c1e81, #8c1e81)
+        opacity: 0.7
+        height:280px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        h1
+          color: #fff
+          font-family: roboto
+          font-size: 24px
+          text-align: center
+          font-weight:400
+          @media(max-width: 767px)
+            font-size: 20px
+
+    @media(max-width: 768px)
+      height: 150px
+  .contenedor
+    top: 150px
+    position: absolute
+    display: block
+    text-align: center
+    left: 0
+    right: 0
+    @media(max-width: 768px)
+      top: 127px
+    @media(max-width: 420px)
+      top: 127px
+      width: 75%
+      margin: 0 auto
+
+    .fondo-titulo
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      background-color: #24436F
+      color: #fff
+      text-align: center
+      margin: 0 auto
+      padding: 15px 40px
+      // letter-spacing: 1px
+      z-index: 99
+      // width: 100%
+      @media(max-width: 768px)
+        padding: 15px 20px 9px
+      h1
+        font-family: 'AlfabetLight', sans-serif
+        padding: 0
+        font-weight: normal;
+        margin: 0 auto
+        font-size: 28px
+        // text-transform: uppercase
+        @media(max-width: 768px)
+          font-size: 22px
+        // @media(max-width: 1085px) and (min-width: 768px)
+        //   font-size: 22px
+  .largo
+    @media(max-width: 420px)
+      top: 117px
+      width: 60%
+

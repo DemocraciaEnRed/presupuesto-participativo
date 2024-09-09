@@ -1,0 +1,65 @@
+.seccion-barrios
+  overflow: hidden
+  position: relative
+  &::before
+    content: ""
+    position: absolute
+    width: 100%
+    left: 0
+    top: 0
+    box-shadow: 0 0 8px 1px #747474
+  &::after
+    content: ""
+    position: absolute
+    width: 100%
+    left: 0
+    bottom: 0
+    box-shadow: 0 0 8px 1px #747474
+  .seccion-barrios-proyectos
+    font-family: 'AlfabetRegular', sans-serif
+    width: 100%
+    display: -webkit-flex
+    display: flex
+    flex-wrap: wrap
+    @media screen and (max-width: 500px)
+      padding: 0
+    .fondo-titulo
+      margin-bottom: 35px
+    h2
+    h3
+      font-weight: 500
+    .row
+      width: 100%
+    .cont-barrio
+      margin-top: 3%
+      text-align: center
+
+
+    .seccion-botones
+      margin-bottom: 3%
+      text-align: center
+      @media screen and (max-width: 500px)
+        width: 100%
+        display: flex
+        flex-flow: column wrap
+        align-items: center
+      .boton-azul
+        font-size: 30px
+        margin: 10px 15px 30px
+        padding: 20px 25px
+        @media screen and (max-width: 500px)
+          font-size: 20px
+          margin: 15px 0
+
+    .contenedor-boton
+      margin: 3% 0 0 5%
+
+
+    button:hover
+      background-color: #106c8e
+
+
+    .btn.active
+      background: linear-gradient(to right, #099dc3, #8a288f)
+      color: white
+      border: none

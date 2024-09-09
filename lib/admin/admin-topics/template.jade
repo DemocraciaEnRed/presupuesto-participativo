@@ -1,0 +1,83 @@
+#topics-wrapper
+  .topics-admin
+    .top-buttons
+      .export-resultados-wrapper
+        a.btn.btn-primary(href='/api/v2/export/topics/export-resultados-votantes?forum=proyectos')='Descargar votos por votantes'         
+      .export-resultados-wrapper
+        a.btn.btn-primary(href='/api/v2/export/topics/export-resultados-proyectos?forum=proyectos')='Descargar resultados por proyectos'   
+      .export-update-wrapper
+      a.btn.btn-success.btn-block.new(href=urlBuilder.for('admin.topics.create', {forum: forum.name}))
+        span.glyphicon.glyphicon-plus
+        = ' ' + t('admin-topics.list.add-topic')
+    .well.well-lg.clearfix
+      .row
+        .col-md-6.col-xs-12.text-center
+          .input-group.input-group-md.busqueda-wrapper
+            input.form-control(type='text', name='busqueda', placeholder='#{t("admin-topics.list.search.placeholder")}', autofocus, maxlength='100')
+        .col-md-2.col-xs-12.text-center
+          button.input-group-addon.buscar-tema
+            i.glyphicon.glyphicon-search
+        .col-md-4.col-xs-12.text-center
+          .btn-group
+            span.sort-label.pull-left=t('admin-topics.list.sort')
+            button.btn.btn-primary.sort(data-sort='topic-date')
+              span.glyphicon.glyphicon-time
+            button.btn.btn-primary.sort.por-nombre(data-sort='topic-title')
+              span='A - Z'
+      .row.row-filtros
+        .col-md-8.col-xs-12
+          .input-group.input-group-md
+            ='Zona: '
+            select(name='zona')
+              option(value="") Todos
+              - each obj in uniqAttrs.zonas
+                  option(value="#{obj.value}") #{obj.name}
+        .col-md-4.col-xs-12
+          .input-group.input-group-md
+            ='Temas: '
+            select(name='tema')
+              option(value="") Todos
+              - each obj in uniqAttrs.tags
+                option(value="#{obj.value}") #{obj.name}
+    #topic-list.list.list-group.col-xs-12
+      - each topic in topics
+        .list-group-item(data-topicid=topic.id, data-topic-ispublic=topic.public)
+          .topic-buttons.pull-right
+            button.btn.btn-warning.unpublish-topic(data-toggle="tooltip" data-placement="top" title="Despublicar")
+              span.glyphicon.glyphicon-download
+            button.btn.btn-success.publish-topic(data-toggle="tooltip" data-placement="top" title="Publicar")
+              span.glyphicon.glyphicon-upload
+            button.btn.btn-default.edit-topic(data-topic-edit-url=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}), data-toggle="tooltip" data-placement="top" title="Editar")
+              span.glyphicon.glyphicon-pencil
+            button.btn.btn-default.ver-proyecto(data-topic-url=topic.url, data-toggle="tooltip" data-placement="top" title="Vista pública")
+              span.glyphicon.glyphicon-eye-open
+            button.btn.btn-default.edit-topic(data-topic-edit-url=urlBuilder.for('admin.topics.id.album', {id: topic.id, forum: forum.name}), data-toggle="tooltip" data-placement="top" title="Album")
+              span.glyphicon.glyphicon-picture
+            select.mas-acciones(data-topic-edit-url=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}))
+              option(value="") Más acciones
+              option(value="anchor-title") > Cambiar título
+              option(value="anchor-attrs.problema") > Cambiar texto
+
+          h4.topic-title
+            a(href=urlBuilder.for('admin.topics.id', {id: topic.id, forum: forum.name}), rel="noopener noreferer", target="_blank")=topic.mediaTitle
+            - if (topic.attrs.state == 'pendiente')
+                span.placa.idea.text
+                  span.glyphicon.glyphicon-leaf
+                  span='  Idea'
+            - if (topic.attrs.state == 'proyecto')
+                span.placa.proyecto.text
+                  span.glyphicon.glyphicon-grain
+                  span='  Proyecto'
+                  
+          span.topic-date.hide=topic.createdAt
+
+          .topic-multi-tags
+            span.glyphicon.glyphicon-tag
+            span.text.topic-tag=topic.tag && topic.tag.name + ' - '
+            span.text.topic-tags=topic.tags.map(toTitleCase).join(', ')
+
+          .topic-status-data
+            - if (topic.zona)
+              span.placa.text=topic.zona.nombre
+
+    .topics-pagination

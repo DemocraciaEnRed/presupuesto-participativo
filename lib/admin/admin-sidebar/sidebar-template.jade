@@ -1,0 +1,46 @@
+ul.admin-menu.nav.nav-pills.nav-stacked(class=forum.privileges.canChangeTopics ? '' : 'hide')
+  - if (forum.privileges.canCreateTopics)
+    li
+      a(href=urlBuilder.for('admin.topics', {forum: forum.name}) data-section='topics')
+        span.glyphicon.glyphicon-list
+        =t('admin-sidebar.topics.title')
+  - if (forum.privileges.canChangeTopics)
+    li
+      a(href=urlBuilder.for('admin.comments', {forum: forum.name}) data-section='comments')
+        span.glyphicon.glyphicon-comment
+        =t('admin-sidebar.comments.title')
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.tags', {forum: forum.name}) data-section='tags')
+        span.glyphicon.glyphicon-tags
+        =t('admin-sidebar.tags.title')
+  - if (forum.privileges.canEdit)
+    li
+      a(href=urlBuilder.for('admin.permissions', {forum: forum.name}) data-section='permissions')
+        span.glyphicon.glyphicon-lock
+        =t('admin-sidebar.permissions.title')
+  - if (config.usersWhitelist)
+    li
+      a(href="/admin/users" data-section='users')
+        span.glyphicon.glyphicon-user
+        =t('admin-sidebar.whitelists.title')
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.about-us', {forum: forum.name}) data-section='about-us')
+        span.glyphicon.glyphicon-question-sign
+        ='Acerca de'
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.padron', {forum: forum.name}) data-section='padron')
+        span.glyphicon.glyphicon-list
+        ='Padrón'
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.contenido-portada', {forum: forum.name}) data-section='contenido-portada')
+        span.glyphicon.glyphicon-home
+        ='Textos'
+  - if (user.staff)
+    li
+      a(href=urlBuilder.for('admin.settings-stage', {forum: forum.name}) data-section='settings-stage')
+        span.glyphicon.glyphicon-cog
+        ='configuración'

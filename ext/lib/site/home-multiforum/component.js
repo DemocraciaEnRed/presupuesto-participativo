@@ -61,8 +61,8 @@ export default class HomeMultiforumOverride extends Component {
           <BannerForoVecinal title={this.state.texts['home-title']} texts={this.state.texts} />
           {forum && <ThumbsVoto texts={this.state.texts} forum={this.state.forum} />}
           {forum && <BannerInvitacion texts={this.state.texts}/>}
-          <BannerMapaVectores />
-          <EncuentrosProximos  texts={this.state.texts}/>
+          {/* <BannerMapaVectores />
+          <EncuentrosProximos  texts={this.state.texts}/> */}
           <Jump goTop={this.goTop} />
           <Footer />
         </Anchor>

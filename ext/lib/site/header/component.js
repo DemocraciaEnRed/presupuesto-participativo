@@ -73,11 +73,14 @@ class Header extends Component {
   }
 
   onUserStateChange = () => {
-    if (this.props.user.state.fulfilled){
-      forumStore.findOneByName(config.forumProyectos).then(
-        forum => this.setState({ userPrivileges: forum.privileges, forumConfig: forum.config })
-      )
-    }
+    forumStore.findOneByName(config.forumProyectos).then(
+      forum => {
+        this.setState({ forumConfig: forum.config })
+        if (this.props.user.state.fulfilled) {
+          this.setState({ userPrivileges: forum.privileges })
+        }
+      })
+
   }
 
   render () {
@@ -89,6 +92,7 @@ class Header extends Component {
 
     const userState = this.props.user.state
     const {forumConfig} = this.state
+
     // MEDIA QUERY - Si es menor al breakpoint muestra un menú, si es mayor, otro
     if (window.matchMedia('(max-width: 975px)').matches) {
       return (
@@ -177,14 +181,14 @@ class Header extends Component {
                   Ideas y Proyectos
               </Link>
             </li>         
-            <li className={`header-item ${window.location.pathname.includes('/archivo') ? 'active' : ''}`}>
+            <li className={`header-item ${window.location.pathname.includes('/catalogo') ? 'active' : ''}`}>
               <Link
-                to='/archivo'
+                to='/catalogo'
                 className='header-link'
                 tabIndex="83"
-                onClick={() => window.location.href = '/archivo'}
+                onClick={() => window.location.href = '/catalogo'}
                 >
-                  Archivo
+                Catalogo
               </Link>
             </li>                
             { forumConfig && forumConfig.votacion && <li className={`header-item ${window.location.pathname.includes('/votacion') ? 'active' : ''}`}>

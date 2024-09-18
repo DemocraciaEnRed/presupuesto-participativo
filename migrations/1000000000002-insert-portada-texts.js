@@ -12,13 +12,13 @@ const textsData = [
 	{ "name": "home-video1-webm", "text": "https://cldup.com/b5-PScfd-V.webm" },
 	{ "name": "home-video2-mp4", "text": "https://cldup.com/w4RSGFJStA.mp4" },
 	{ "name": "home-video2-webm", "text": "https://cldup.com/0Cy2GaQ-cR.webm" },
-	{ "name": "home-icono1-imagen", "text": "https://i.ibb.co/Fgf5xgb/foros-vecinales-icono.png" },
+  { "name": "home-icono1-imagen", "text": "ext/lib/site/home-multiforum/enterate.png" },
   { "name": "home-icono1-titulo", "text": "ENTERATE" },
   { "name": "home-icono1-texto", "text": "El PP es una herramienta que te permite proponer ideas para mejorar tu colegio o facultad utilizando una parte del presupuesto institucional. Si tu propuesta cumple con el reglamento, pasará a la etapa de votación, donde podría convertirse en un proyecto financiado." },
-	{ "name": "home-icono2-imagen", "text": "https://i.ibb.co/9VjQQHy/icon-propuestas.png" },
+  { "name": "home-icono2-imagen", "text": "ext/lib/site/home-multiforum/participa.png" },
   { "name": "home-icono2-titulo", "text": "¿CÓMO HAGO PARA PARTICIPAR?" },
   { "name": "home-icono2-texto", "text": "Registrate para subir tus ideas. Revisá el reglamento, elegí un eje temático, asigná un título y describí brevemente tu propuesta. Además, podés comentar y dar “me gusta” a las ideas de otros. Las propuestas viables pasarán a votación, y las más votadas serán financiadas." },
-	{ "name": "home-icono3-imagen", "text": "https://i.ibb.co/BttPHbc/icon-seguimiento.png" },
+  { "name": "home-icono3-imagen", "text": "ext/lib/site/home-multiforum/seguimos.png" },
   { "name": "home-icono3-titulo", "text": "¿CÓMO SEGUIMOS?" },
   { "name": "home-icono3-texto", "text": "Al finalizar la etapa de presentación, las ideas serán evaluadas y, si son viables, se convertirán en proyectos para la votación, donde los estudiantes decidirán cuáles se implementarán." },
 
@@ -26,7 +26,7 @@ const textsData = [
   { "name": "home-encuentro-subtitle", "text": "Agendate la reunión de tu barrio y presentá tus ideas." },
 
   //baner 1 
-  { "name": "home-banner-image", "text": '/ext/lib/site/banner-invitacion/icon-votar.svg' },
+  { "name": "home-banner-image", "text": '/ext/lib/site/banner-invitacion/icon-votar.png' },
   { "name": "home-banner-title", "text": '¡Proximamente abrirá la etapa de subida de ideas' },
   { "name": "home-banner-text", "text": 'Te invitamos a registrarte para notificarte cuando la misma este disponible, que puedas compartir tus ideas con la comunidad. Tambien podes conocer el avance de los proyectos del 2023' },
 
@@ -51,7 +51,9 @@ const textsData = [
   { "name": "votacion-steps", "text": "<div style='text-align: center;'><span style='font-size: 24px;'>Pasos y reglas para la votación</span></div><div class='wrapper'><br></div><ul><li class='wrapper'>Tenés <b>2 votos disponibles</b>.</li><li class='wrapper'>El <b>primer voto es obligatorio</b> y se destina a <b>tu zona indicada al momento de registro.</b></li><li class='wrapper'>Los proyectos aparecerán automáticamente ya definidos por tu zona</li><li class='wrapper'>El <b>segundo voto es opcional</b> y se destina a votar un proyecto de <b>cualquier zona del municipio.</b></li></ul>" },
 
   //footer
-  { "name": "footer-info", "text": "<div>Subsecretaría de Modernización</div><div><span style='color: rgb(187, 187, 187);'>Av. Juan B. Justo 5665 Piso 1</span></div><div><span style='color: rgb(187, 187, 187);'>Mar Del Plata, Provincia de Buenos Aires</span></div><div><span style='color: rgb(187, 187, 187);'>Código postal: B7604AAG</span></div><div>Mail de contacto: <a href='mailto:ParticipaMGP@mardelplata.gob.ar'>ParticipaMGP@mardelplata.gob.ar</a></div>" }
+  {
+    "name": "footer-info", "text": "<div>Democracia en Red</div><div><span >Democracia en Red es una ONG latinoamericana de Buenos Aires, Argentina, para el mundo.</div><br><div><strong>Mail de contacto:</strong> <a href='mailto:speak@democraciaenred.org'>speak@democraciaenred.org</a></div>"
+  }
 
 ]
 

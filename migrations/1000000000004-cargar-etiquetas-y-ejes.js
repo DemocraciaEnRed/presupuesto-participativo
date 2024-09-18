@@ -1,7 +1,7 @@
 const dbReady = require('lib/models').ready
 const models = require('lib/models')
 
-const nombreMigrationParaLog = 'cargar etiquetas y eliminar ejes por ser innecesarios en este pp'
+const nombreMigrationParaLog = 'cargar etiquetas y ejes'
 const Tag = models.Tag
 const Eje = models.Eje
 
@@ -17,33 +17,39 @@ const etiquetas = [
   { nombre: 'Ideas para Organizaciones/Clubes' },
 ]
 
-
-
 const tags = etiquetas.map(etiqueta => {
   return {
     name: etiqueta.nombre,
     hash: etiqueta.nombre.toLowerCase().replace(/ /g, '-'),
     image: 'people',
-    color: '#091A33',
-    visible: true
+    color: '#091A33'
   }
 })
+
+const ejes = [
+  { nombre: 'Innovación' },
+  { nombre: 'Proximidad y sustentabilidad' },
+  { nombre: 'Género e inclusión' },
+  { nombre: 'Aprendizajes, investigación e internacionalización' },
+  { nombre: 'Modernización y transparencia' },
+  { nombre: 'Bioseguridad' },
+  { nombre: 'Otro' },
+]
 
 /**
  * Make any changes you need to make to the database here
  */
-exports.up = function up (done) {
+exports.up = function up(done) {
   // done() devuelve al Migrator de lib/migrations
   dbReady()
 
-    // borramos data en eje al ser innecesaria para el funcionamiento del sistema y esto confunde con Tags
+    // borramos data vieja
+    .then(() => Tag.collection.deleteMany({}))
     .then(() => Eje.collection.deleteMany({}))
 
-    // quitamos la visibilidad a las tags viejas
-    .then(() => Tag.collection.updateMany({}, {$set: {visible: false}}))
-
-    // Agregamos las nuevas tags
-    .then(() => Tag.insertMany(tags) )
+    // Agregamos data
+    .then(() => Tag.insertMany(tags))
+    .then(() => Eje.insertMany(ejes))
 
     // Todo OK
     .then(() => {

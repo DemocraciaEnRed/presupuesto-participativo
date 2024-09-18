@@ -23,6 +23,7 @@ class MobileMenu extends Component {
   }
   render () {
     const { forumConfig } = this.props
+
     return (
       <nav className='mobile-nav'>
         <a
@@ -59,12 +60,12 @@ class MobileMenu extends Component {
                 </div>
                 <div className='header-item'>
                   <Link
-                    to='/archivo'
-                    className={`header-link ${!~window.location.pathname.includes('archivo') ? 'active' : ''}`}
+                    to='/catalogo'
+                    className={`header-link ${!~window.location.pathname.includes('catalogo') ? 'active' : ''}`}
                     activeStyle={{ color: '#8C1E81' }}
-                    onClick={() => window.location.href = '/archivo'}
+                    onClick={() => window.location.href = '/catalogo'}
                     tabIndex="3">
-                    Archivo
+                    Catalogo
                   </Link>
                 </div>                
                 { forumConfig.votacion && <div className='header-item'>

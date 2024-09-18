@@ -40,17 +40,17 @@ export default function ThumbsVoto(props) {
             </div>
           </div>
         </div>
-        {/* <div className="row cont">
+        <div className="row cont">
             <div className="intro-ideas">
               <h2>
-              <strong>¡SUMÁ TU IDEA!</strong><br />
-              Con <strong>Participa MGP</strong> vas a poder presentar los proyecto
+              <strong>¿Cómo participar?</strong>
               </h2>
             </div>
-        </div>     */}
+        </div>    
 
         <div className="row cont">
           <div className="col-md-4">
+            <div className='fondo-rosa rounded-xl p-1'>
             <div
               className="que-son img-responsive"
               style={styleIcono1}>
@@ -60,9 +60,12 @@ export default function ThumbsVoto(props) {
               { props.texts['home-icono1-titulo']}
             </h2>
             <p className="que-son-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono1-texto']}} />
+
+            </div>
           </div>
 
           <div className="col-md-4">
+            <div className='fondo-rosa rounded-xl p-2'>
             <div
               className="que-propongo img-responsive"
               style={styleIcono2}>
@@ -70,9 +73,13 @@ export default function ThumbsVoto(props) {
             <h2 className="text-center mgp">{props.texts['home-icono2-titulo']}</h2>
             <p className="que-propongo-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono2-texto']}} />
 
+            </div>
+
           </div>
 
           <div className="col-md-4">
+            <div className='fondo-rosa rounded-xl p-2'>
+
             <div
               className="como-sigo img-responsive"
               style={styleIcono3}>
@@ -81,6 +88,7 @@ export default function ThumbsVoto(props) {
               { props.texts['home-icono3-titulo']}
             </h2>
             <p className="donde-voto-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono3-texto']}} />
+            </div>
           </div>
 
         </div>

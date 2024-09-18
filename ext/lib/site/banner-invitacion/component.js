@@ -11,7 +11,7 @@ export default (props) =>  {
         <img src={texts['home-banner-image']} alt="Ideas"/>
         }
         <p>{texts['home-banner-title']}</p>
-        
+            <p>{texts['home-banner-text']}</p>
         {texts['home-banner-button1-text'] && <a href={texts['home-banner-button1-link']} target="_blank" tabIndex="31" className="boton-foro">
             {texts['home-banner-button1-text']}
         </a>}

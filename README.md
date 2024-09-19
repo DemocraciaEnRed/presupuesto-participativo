@@ -3,12 +3,12 @@
 # Presupuestos Participativos
 
 ![Node Version](<https://img.shields.io/badge/node-v8(!)-red>)
-![Documentation](https://img.shields.io/badge/doc-available-brightgreen)
+![Documentation](https://img.shields.io/badge/docs-available-brightgreen)
 ![License](https://img.shields.io/github/license/DemocraciaEnRed/presupuesto-participativo)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![Version](https://img.shields.io/github/v/release/DemocraciaEnRed/presupuesto-participativo)
 
-Una herramienta digital de participación ciudadana para gobiernos e instituciones, que permite a los usuarios comentar, votar, jerarquizar, optar entre opciones, o establecer grados de valoración entre temas públicos.
+Herramienta digital de participación ciudadana para gobiernos e instituciones, que permite a los usuarios comentar, votar, jerarquizar, optar entre opciones, o establecer grados de valoración entre temas públicos.
 
 ## ⚒️ Guía de instalación y ejecución
 
@@ -16,11 +16,9 @@ Hay 2 maneras de preparar el entorno para desarrollo. A través de Docker, o con
 
 ### Docker
 
-> #### ⚠️ Prerequisitos
+> #### ⚠️ Prerequisito
 >
-> Este entorno virtual requiere de:
->
-> - [Docker](https://docs.docker.com/engine/install/_) y (docker) compose (que en las nuevas versiones ya viene en la instalación de docker)
+> Este entorno virtual requiere de tener [Docker](https://docs.docker.com/) instalado
 
 #### Instalación
 

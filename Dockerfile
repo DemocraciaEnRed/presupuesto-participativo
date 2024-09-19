@@ -1,7 +1,5 @@
 FROM node:8
 
-MAINTAINER Francisco Pensa <francisco@democracyos.io>
-
 RUN npm config set python python2.7
 
 WORKDIR /usr/src
@@ -10,7 +8,7 @@ COPY ["package.json", "."]
 COPY ["package-lock.json", "."]
 
 ENV NODE_ENV=production \
-    NODE_PATH=/usr/src
+  NODE_PATH=/usr/src
 
 #para debuggear:
 #RUN npm install --verbose

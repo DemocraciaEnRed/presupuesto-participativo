@@ -2,10 +2,25 @@ version: '3'
 
 services:
   mongo:
-    container_name: mongodb-der
     image: mongo:3.2
     ports:
       - 27017:27017
     volumes:
       - ./tmp/db:/data/db
 
+  app:
+    build:
+      context: .
+    image: ghcr.io/democraciaenred/presupuesto-participativo
+    volumes:
+      - .:/usr/src
+      - /usr/src/node_modules
+    ports:
+      - 3000:3000
+    links:
+      - mongo
+    environment:
+      - NODE_PATH=.
+      - NODE_ENV=development
+      - DEBUG=democracyos*
+    command: ./node_modules/.bin/gulp bws

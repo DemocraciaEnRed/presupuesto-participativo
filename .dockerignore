@@ -16,6 +16,7 @@ Procfile
 
 config/*.json
 !config/defaults.json
+!config/development.json
 
 # Docs
 *.md

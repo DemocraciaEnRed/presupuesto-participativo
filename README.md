@@ -64,7 +64,7 @@ $ ./run-dev.sh
 
 ## 👷‍♀️ Cómo colaborar
 
-Las contribuciones siempre son bienvenidas. Si te interesa contribuir a este proyecto y no estás seguro de por dónde empezar, preparamos esta [guía de colaboración](../docs/CONTRIBUTING.md).
+Las contribuciones siempre son bienvenidas. Si te interesa contribuir a este proyecto y no estás seguro de por dónde empezar, preparamos esta [guía de colaboración](https://github.com/DemocraciaEnRed/.github/blob/main/docs/CONTRIBUTING.md).
 
 ## 📖 Documentación
 

@@ -1,193 +1,397 @@
 [
-    {
-        "name" : "anio",
-        "title" : "Año",
-        "mandatory" : false,
-        "kind" : "String",
-        "max" : 128,
-        "min" : 0
-    },
   {
-    "name" : "state",
-    "title" : "Estado",
-    "description" : "Agregar una descripción del estado del proyecto",
-    "mandatory" : true,
-    "kind" : "Enum",
-    "options" : [
-        {
-            "name" : "pendiente",
-            "title" : "Pendiente"
-        },
-        {
-            "name" : "factible",
-            "title" : "Factible"
-        },
-        {
-            "name" : "no-factible",
-            "title" : "No factible"
-        },
-        {
-            "name": "integrado",
-            "title": "Integrado"
-        },
-        {
-            "name" : "no-ganador",
-            "title" : "No ganador"
-        },
-        {
-            "name" : "preparacion",
-            "title" : "En Preparación"
-        },
-        {
-            "name" : "compra",
-            "title" : "En Proceso de Compra"
-        },
-        {
-            "name" : "ejecucion",
-            "title" : "En Ejecución"
-        },
-        {
-            "name" : "finalizado",
-            "title" : "Finalizado"
-        }
+    "name": "state",
+    "title": "Estado",
+    "description": "Agregar una descripción del estado de la idea",
+    "mandatory": true,
+    "hide": false,
+    "kind": "Enum",
+    "icon": "stop.png",
+    "width": 6,
+    "groupOrder": 0,
+    "group": "",
+    "order": 2,
+    "options": [
+      {
+        "name": "pendiente",
+        "title": "Pendiente",
+        "_id": "66e18c546e924a460766cc75"
+      },
+      {
+        "name": "no-factible",
+        "title": "No factible",
+        "_id": "66e18c546e924a460766cc74"
+      },
+      {
+        "name": "integrado",
+        "title": "Integrada",
+        "_id": "66e18c546e924a460766cc73"
+      },
+      {
+        "name": "factible",
+        "title": "Factible",
+        "_id": "66e18c546e924a460766cc72"
+      },
+      {
+        "name": "ganador",
+        "title": "Ganadora",
+        "_id": "66e18c546e924a460766cc71"
+      }
     ]
   },
   {
-    "name" : "project-budget-preparacion",
-    "title" : "En estado de preparación",
-    "description" : "Presupuesto estimado para estado de preparación",
-    "mandatory" : true,
-    "kind" : "String"
+    "name": "admin-comment",
+    "title": "Comentario del Moderador",
+    "description": "Escribir aquí un comentario en el caso que se cambie el estado a \"Factible\" o \"No factible\"",
+    "mandatory": true,
+    "hide": false,
+    "kind": "LongString",
+    "icon": "icono_comentario moderador.png",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 4,
+    "max": 5000,
+    "min": 0
   },
   {
-    "name" : "project-budget-compra",
-    "title" : "En estado de compra",
-    "description" : "Presupuesto asignado al estado de compra",
-    "mandatory" : true,
-    "kind" : "String"
+    "name": "admin-comment-referencia",
+    "title": "Integración de ideas",
+    "description": "Colocar aquí el link a la idea final, en el caso que esta idea esté integrada junto con otra",
+    "mandatory": true,
+    "hide": false,
+    "kind": "String",
+    "icon": "icono_link.png",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 3,
+    "max": 128,
+    "min": 0
   },
   {
-    "name" : "project-budget-ejecucion",
-    "title" : "En estado de ejecución",
-    "description" : "Presupuesto asignado para el estado de ejecución",
-    "mandatory" : true,
-    "kind" : "String"
+    "name": "problema",
+    "title": "Problema o necesidad existente",
+    "mandatory": true,
+    "hide": false,
+    "description": "¿Qué problemas querés resolver? ¿a quiénes afecta? ¿Cómo?",
+    "kind": "LongString",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 32,
+    "max": 5000,
+    "min": 0
   },
   {
-    "name" : "project-budget-finalizado",
-    "title" : "En estado finalizado",
-    "description" : "Presupuesto ejecutado en el estado finalizado",
-    "mandatory" : true,
-    "kind" : "String"
+    "name": "genero",
+    "title": "Genero del postulante",
+    "description": "Opcional. El genero del postulante",
+    "mandatory": false,
+    "hide": true,
+    "kind": "String",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 0,
+    "group": "",
+    "order": 3,
+    "max": 256,
+    "min": 1
   },
   {
-    "name" : "admin-comment",
-    "title" : "Comentario del Moderador",
-    "description" : "Escribir aquí un comentario en el caso que se cambie el estado a \"Factible\" o \"No factible\"",
-    "mandatory" : true,
-    "kind" : "LongString"
+    "name": "numero",
+    "title": "Número identificador de la idea",
+    "description": "El número identificador del proyecto",
+    "mandatory": true,
+    "kind": "Number",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 0,
+    "group": "",
+    "order": 0,
+    "max": 1000,
+    "min": 1
   },
   {
-    "name" : "admin-comment-referencia",
-    "title" : "ID a proyecto integrador",
-    "description" : "Colocar aquí el ID al proyecto integrador, en el caso que esta propuesta se haya integrado junto con otra",
-    "mandatory" : true,
-    "kind" : "String"
+    "name": "presupuesto-total",
+    "title": "Presupuesto Total",
+    "description": "Sin comas ni puntos",
+    "mandatory": true,
+    "kind": "Number",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 1,
+    "max": 1000000000,
+    "min": 1
   },
   {
-      "name" : "nombre",
-      "title" : "Nombre y Apellido",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 128,
-      "min" : 0
+    "name": "proyecto-visibilidad",
+    "title": "Visibilidad de proyecto",
+    "description": "Solo hacer visible aquellas ideas que avancen a etapa de proyecto o sean factibles",
+    "mandatory": false,
+    "hide": true,
+    "kind": "Enum",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 1,
+    "group": "2. Proyecto",
+    "order": 0,
+    "options": [
+      {
+        "name": "oculto",
+        "title": "Oculto",
+        "_id": "66e18c546e924a460766cc77"
+      },
+      {
+        "name": "visible",
+        "title": "Visible",
+        "_id": "66e18c546e924a460766cc76"
+      }
+    ]
   },
   {
-      "name" : "domicilio",
-      "title" : "Domicilio",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 200,
-      "min" : 0
+    "name": "proyecto-titulo",
+    "title": "Titulo del Proyecto",
+    "description": "Se admiten hasta 340 caracteres",
+    "mandatory": false,
+    "hide": true,
+    "kind": "String",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 1,
+    "group": "2. Proyecto",
+    "order": 1,
+    "max": 340,
+    "min": 0
   },
   {
-      "name" : "documento",
-      "title" : "DNI",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 50,
-      "min" : 0
+    "name": "proyecto-contenido",
+    "title": "Contenido del Proyecto",
+    "description": "Se admiten hasta 5000 caracteres",
+    "mandatory": false,
+    "kind": "LongString",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 1,
+    "group": "2. Proyecto",
+    "order": 2,
+    "max": 5000,
+    "min": 0
   },
   {
-      "name" : "telefono",
-      "title" : "Teléfono",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 50,
-      "min" : 0
+    "name": "proyecto-estado",
+    "title": "Estado",
+    "description": "Agregar una descripción del estado del proyecto",
+    "mandatory": false,
+    "hide": true,
+    "kind": "Enum",
+    "icon": "stop.png",
+    "width": 12,
+    "groupOrder": 1,
+    "group": "2. Proyecto",
+    "order": 3,
+    "options": [
+      {
+        "name": "no-ganador",
+        "title": "No ganador",
+        "_id": "66e18c546e924a460766cc79"
+      },
+      {
+        "name": "ganador",
+        "title": "Ganador",
+        "_id": "66e18c546e924a460766cc78"
+      }
+    ]
   },
   {
-      "name" : "email",
-      "title" : "Email",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 128,
-      "min" : 0
+    "name": "presupuesto-estado",
+    "title": "Estado",
+    "description": "Agregar una descripción del estado del presupuesto",
+    "mandatory": false,
+    "kind": "Enum",
+    "icon": "stop.png",
+    "width": 12,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 0,
+    "options": [
+      {
+        "name": "preparacion",
+        "title": "En Preparación",
+        "_id": "66e18c546e924a460766cc7d"
+      },
+      {
+        "name": "compra",
+        "title": "En Contratación",
+        "_id": "66e18c546e924a460766cc7c"
+      },
+      {
+        "name": "ejecucion",
+        "title": "En Ejecución",
+        "_id": "66e18c546e924a460766cc7b"
+      },
+      {
+        "name": "finalizado",
+        "title": "Finalizado",
+        "_id": "66e18c546e924a460766cc7a"
+      }
+    ]
   },
   {
-      "name" : "titulo",
-      "title" : "Titulo",
-      "mandatory" : true,
-      "kind" : "String",
-      "max" : 128,
-      "min" : 0
+    "name": "presupuesto-preparacion",
+    "title": "Preparación",
+    "description": "Sin comas ni puntos",
+    "mandatory": false,
+    "kind": "Number",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 2,
+    "max": 1000000000,
+    "min": 1
   },
   {
-      "name" : "barrio",
-      "title" : "Barrio",
-      "mandatory" : true,
-      "kind" : "Enum",
-      "options" : [
-      ]
+    "name": "presupuesto-compra",
+    "title": "Compra",
+    "description": "Sin comas ni puntos",
+    "mandatory": false,
+    "kind": "Number",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 3,
+    "max": 1000000000,
+    "min": 1
   },
   {
-    "name" : "problema",
-    "title" : "Problema o necesidad existente",
-    "mandatory" : true,
-    "kind" : "String",
-    "max" : 1000,
-    "min" : 0
+    "name": "presupuesto-ejecucion",
+    "title": "Ejecución",
+    "description": "Sin comas ni puntos",
+    "mandatory": false,
+    "kind": "Number",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 4,
+    "max": 1000000000,
+    "min": 1
   },
   {
-    "name" : "solucion",
-    "title" : "Propuesta para solucionar el problema",
-    "mandatory" : true,
-    "kind" : "String",
-    "max" : 1000,
-    "min" : 0
+    "name": "presupuesto-finalizado",
+    "title": "Finalizado",
+    "description": "Sin comas ni puntos",
+    "mandatory": false,
+    "kind": "Number",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 5,
+    "max": 1000000000,
+    "min": 1
   },
   {
-    "name" : "beneficios",
-    "title" : "Beneficios que brindará el proyecto al barrio",
-    "mandatory" : true,
-    "kind" : "String",
-    "max" : 1000,
-    "min" : 0
+    "name": "proyecto-votos",
+    "title": "Cantidad de votos",
+    "description": "Sin comas ni puntos",
+    "mandatory": false,
+    "kind": "Number",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 2,
+    "group": "2. Proyecto",
+    "order": 4,
+    "max": 1000000,
+    "min": 1
   },
   {
-    "name" : "description",
-    "title" : "Descripción",
-    "mandatory" : false,
-    "kind" : "String",
-    "max" : 512,
-    "min" : 0
+    "name": "presupuesto-historial",
+    "title": "Historial de ejecución de presupuesto",
+    "description": "Puede dejar aquí notas acerca de la ejecución del presupuesto",
+    "mandatory": false,
+    "kind": "LongString",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 2,
+    "group": "3. Presupuesto",
+    "order": 6,
+    "max": 8000,
+    "min": 1
   },
   {
-    "name" : "votos",
-    "title" : "Votos",
-    "mandatory" : true,
-    "kind" : "Number",
-    "max" : 999999999,
-    "min" : 1
+    "name": "telefono",
+    "title": "Teléfono celular",
+    "description": "Únicamente será para contactarse por dudas o avances sobre la idea.",
+    "mandatory": false,
+    "kind": "String",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 0,
+    "group": "",
+    "order": 33,
+    "max": 340,
+    "min": 0
+  },
+  {
+    "name": "barrio",
+    "title": "Barrio",
+    "description": "Escribe el barrio",
+    "mandatory": false,
+    "kind": "String",
+    "icon": "",
+    "width": 6,
+    "groupOrder": 0,
+    "group": "",
+    "order": 34,
+    "max": 340,
+    "min": 0
+  },
+  {
+    "name": "ubicacion",
+    "title": "Ubicación",
+    "description": "Calle y número en caso de que el proyecto tenga ubicación concreta",
+    "mandatory": false,
+    "kind": "String",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 35,
+    "max": 340,
+    "min": 0
+  },
+  {
+    "name": "solucion",
+    "title": "Propuesta de Solución",
+    "description": "Tenga en cuenta que solo se veran los primeros 400 caracteres en la portada",
+    "mandatory": true,
+    "kind": "LongString",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 36,
+    "max": 8000,
+    "min": 0
+  },
+  {
+    "name": "beneficios",
+    "title": "Beneficios para el barrio",
+    "description": "¿Como ayuda este proyecto al barrio? ¿Quiénes se benefician?",
+    "mandatory": false,
+    "kind": "LongString",
+    "icon": "",
+    "width": 12,
+    "groupOrder": 0,
+    "group": "",
+    "order": 37,
+    "max": 8000,
+    "min": 0
   }
 ]

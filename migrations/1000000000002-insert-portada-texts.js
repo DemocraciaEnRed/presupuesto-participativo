@@ -46,7 +46,7 @@ const textsData = [
   { "name": "archivo-subtitle", "text": "Aquí podes visualizar los proyectos de años anteriores" },
 
   //votacion
-  { "name": "votacion-title", "text": 'VOTACIÓN DEL PRESUPUESTO PARTICIPATIVO GENERAL PUEYRREDON 2023' },
+  { "name": "votacion-title", "text": 'VOTACIÓN DEL PRESUPUESTO PARTICIPATIVO 2024' },
   { "name": "votacion-subtitle", "text": "Gracias por participar de la votación del presupuesto participativo 2023" },
   { "name": "votacion-steps", "text": "<div style='text-align: center;'><span style='font-size: 24px;'>Pasos y reglas para la votación</span></div><div class='wrapper'><br></div><ul><li class='wrapper'>Tenés <b>2 votos disponibles</b>.</li><li class='wrapper'>El <b>primer voto es obligatorio</b> y se destina a <b>tu zona indicada al momento de registro.</b></li><li class='wrapper'>Los proyectos aparecerán automáticamente ya definidos por tu zona</li><li class='wrapper'>El <b>segundo voto es opcional</b> y se destina a votar un proyecto de <b>cualquier zona del municipio.</b></li></ul>" },
 

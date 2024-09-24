@@ -65,22 +65,16 @@ class TopicArticle extends Component {
     switch (name) {
       case 'no-ganador':
         return 'no ganador'
-        break
       case 'preparacion':
         return 'en preparación'
-        break
       case 'compra':
         return 'en contratación'
-        break
       case 'ejecucion':
         return 'en ejecución'
-        break
       case 'finalizado':
         return 'finalizado'
-        break
       default:
         return 'factible'
-        break
     }
   }
 
@@ -88,13 +82,10 @@ class TopicArticle extends Component {
     switch (state) {
       case 'preparacion':
         return 'project-budget-preparacion'
-        break
       case 'compra':
         return 'project-budget-compra'
-        break
       case 'ejecucion':
         return 'project-budget-ejecucion'
-        break
       case 'finalizado':
         return 'project-budget-finalizado'
       default:
@@ -110,11 +101,11 @@ class TopicArticle extends Component {
   twitText = () => {
     switch (this.props.topic.attrs.state) {
       case 'pendiente':
-      return encodeURIComponent('Apoyemos este proyecto para mejorar la Municipalidad General Pueyrredon. ')
+        return encodeURIComponent('Apoyemos este proyecto para mejorar el Municipio. ')
       case 'perdedor':
       return encodeURIComponent(this.props.topic.mediaTitle)
       case 'proyectado':
-      return encodeURIComponent('Este proyecto se va a realizar gracias a la participación ciudadana de la Municipalidad General Pueyrredon. ')
+        return encodeURIComponent('Este proyecto se va a realizar gracias a la participación ciudadana. ')
       default:
       return ''
     }

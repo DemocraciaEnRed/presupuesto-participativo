@@ -5,7 +5,7 @@ const { csv } = c2j
 let jsonArray = null
 
 csv()
-.fromFile('./padron-mgp-unique.csv')
+  .fromFile('./padron-unique.csv')
 .then((jsonObj) => {
   jsonArray = jsonObj
   jsonArray = jsonArray.map((item) => item['MATRICULA'])
@@ -17,7 +17,7 @@ csv()
     }
   })
   // Write Json into file
-  fs.writeFile('./padron-mgp-final.json', JSON.stringify(jsonIds), (err) => {
+  fs.writeFile('./padron-final.json', JSON.stringify(jsonIds), (err) => {
     if (err) throw err
     console.log('File successfully written!')
   })

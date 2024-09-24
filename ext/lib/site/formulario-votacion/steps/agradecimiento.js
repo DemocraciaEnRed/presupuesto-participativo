@@ -3,7 +3,7 @@ import React from 'react'
 export default ({dni, hasVoted}) => {
 
     const socialLinksUrl = window.location
-    const shareText = '¡Ayudanos a mejorar el Municipio de General Pueyrredon! Votá los proyectos del presupuesto participativo en'
+    const shareText = '¡Ayudanos a mejorar el Municipio! Votá los proyectos del presupuesto participativo en'
     return (
         <div className='form-votacion'>
             {hasVoted === 'yes' ? 
@@ -21,7 +21,7 @@ export default ({dni, hasVoted}) => {
                 </div>)
             }
             <div className='wrapper text-center'>
-                Te agradecemos nuevamente por haber participado del primer Presupuesto participativo de General Pueyrredon
+                Te agradecemos nuevamente por haber participado del primer Presupuesto participativo
             </div>
     
             <div className='votacion-share text-center'>

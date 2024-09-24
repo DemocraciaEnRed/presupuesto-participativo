@@ -56,7 +56,7 @@ export default function ThumbsVoto(props) {
               style={styleIcono1}>
             </div>
             <h2
-              className="text-center mgp">
+                className="text-center">
               { props.texts['home-icono1-titulo']}
             </h2>
             <p className="que-son-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono1-texto']}} />
@@ -70,7 +70,7 @@ export default function ThumbsVoto(props) {
               className="que-propongo img-responsive"
               style={styleIcono2}>
             </div>
-            <h2 className="text-center mgp">{props.texts['home-icono2-titulo']}</h2>
+              <h2 className="text-center">{props.texts['home-icono2-titulo']}</h2>
             <p className="que-propongo-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono2-texto']}} />
 
             </div>
@@ -84,7 +84,7 @@ export default function ThumbsVoto(props) {
               className="como-sigo img-responsive"
               style={styleIcono3}>
             </div>
-            <h2 className="text-center mgp">
+              <h2 className="text-center">
               { props.texts['home-icono3-titulo']}
             </h2>
             <p className="donde-voto-cont" dangerouslySetInnerHTML={{__html: props.texts['home-icono3-texto']}} />

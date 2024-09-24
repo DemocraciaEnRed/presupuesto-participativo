@@ -68,7 +68,7 @@ Las contribuciones siempre son bienvenidas. Si te interesa contribuir a este pro
 
 ## 📖 Documentación
 
-Consulta la [documentación y estado del software](.docs) para obtener información detallada sobre el proyecto, estructura de archivos, y otros aspectos importantes.
+Consulta la [documentación y estado del software](./docs) para obtener información detallada sobre el proyecto, estructura de archivos, y otros aspectos importantes.
 
 ## ⚖️ Licencia
 

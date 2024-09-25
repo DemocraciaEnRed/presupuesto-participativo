@@ -1,11 +1,19 @@
 #sign-in
   @import './btn-facebook'
-
+  min-height: 80%
   max-width: 400px
   margin: 0 auto
   padding: 0 15px
   padding-top: 20px;
-
+  display: flex
+  align-items: center
+  .sign-in-form
+    width: 100%
+    form
+      .btn.btn-block
+        border-radius: 999px
+        color: #fff
+        background-color: $terciary
   .title-page
     margin-top: 0
     margin-bottom: 0
@@ -23,7 +31,7 @@
     font-size 13px
     letter-spacing 1px
     text-transform uppercase
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 
   hr
     max-width: 80px
@@ -38,8 +46,8 @@
 
   .forgot
     position relative
-
     a
+      color: $terciary
       position absolute
       right 0
       font-size 12px
@@ -65,11 +73,14 @@
     border-radius: 5px;
 
     span
-      font-weight: 800;
       font-size: 1.0em;
       @media (min-width: 400px)
         font-size: 1.1em;
 
     button
       margin-top: 10px;
+      background-color: transparent
+      color: $terciary
+      border: solid 2px $terciary
+      border-radius:999px
 

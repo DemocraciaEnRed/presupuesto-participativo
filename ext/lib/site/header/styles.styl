@@ -56,7 +56,7 @@ nav.navbar
     display: flex;
     align-items: center;
     &:hover, &.active
-      background-color: #eeeeee
+      background-color: $secondary
       border-radius: 34px;
       height: 50px;
       padding: 3px, 17px, 3px, 17px;
@@ -64,6 +64,8 @@ nav.navbar
       height: auto
       position: relative
       color: black
+      &:hover, &.active
+        background-color: $secondary
   .user-badge-helper
     margin-left 
 

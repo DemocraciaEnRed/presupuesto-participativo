@@ -51,7 +51,6 @@ class FormularioPropuesta extends Component {
       solucion: '',
       beneficios: '',
       ubicacion: '',
-      barrio: '',
       telefono: '',
       requirementsAccepted: false,
       
@@ -61,7 +60,6 @@ class FormularioPropuesta extends Component {
       
       availableTags: [],
       zonas: [],
-      barrios: [],
     }
 
     this.handleInputChange = this.handleInputChange.bind(this)
@@ -73,15 +71,6 @@ class FormularioPropuesta extends Component {
     evt.preventDefault()
     const { target: { value, name } } = evt
     this.setState({ [name]: value })
-    if (name === "barrio") {
-      const {zonas} = this.state
-      const finalZona = zonas.find(zona => zona.barrios.includes(value))
-      if (finalZona) {
-        this.setState({ zona: finalZona.id })
-      } else {
-        this.setState({ zona: "" })
-      }
-    }
   }
 
   componentWillMount () {
@@ -100,14 +89,11 @@ class FormularioPropuesta extends Component {
 
     Promise.all(promises).then(results => {
       // topic queda en undefined si no estamos en edit
-      const [ forum, tags, zonas, topic] = results
-      let barrios = []
-      zonas.forEach(zona => zona.barrios.forEach(barrio => barrios.push(barrio)))
+      const [forum, tags, zonas, topic] = results
       let newState = {
         forum,
         availableTags: tags,
         zonas,
-        barrios: barrios.sort(),
         mode: isEdit ? 'edit' : 'new'
       }
 
@@ -123,7 +109,6 @@ class FormularioPropuesta extends Component {
           beneficios: topic.attrs.beneficios,
           telefono: topic.attrs.telefono,
           ubicacion: topic.attrs.ubicacion,
-          barrio: topic.attrs.barrio,
           state: topic.attrs.state,
           adminComment: topic.attrs['admin-comment'],
           adminCommentReference: topic.attrs['admin-comment-reference'],
@@ -159,7 +144,8 @@ class FormularioPropuesta extends Component {
         // zona: user.zona._id,
         email: user.email,
         documento: user.dni,
-        nombre: user.firstName + ' ' + user.lastName
+        nombre: user.firstName + ' ' + user.lastName,
+        zona: user.zona.id
       })
     }
   }
@@ -176,7 +162,6 @@ class FormularioPropuesta extends Component {
       'attrs.problema': this.state.problema,
       'attrs.solucion': this.state.solucion,
       'attrs.beneficios': this.state.beneficios,
-      'attrs.barrio': this.state.barrio,
       'attrs.ubicacion': this.state.ubicacion,
       zona: this.state.zona,
     }
@@ -256,7 +241,6 @@ class FormularioPropuesta extends Component {
     if (this.state.tag === '' ) return true
     if (this.state.solucion === '') return true
     if (this.state.beneficios === '') return true
-    if (this.state.barrio === '') return true
     if (this.state.zona === '') return true
     return false;
 
@@ -285,7 +269,7 @@ class FormularioPropuesta extends Component {
   }
 
   render () {
-    const { forum, zonas, barrios, requirementsAccepted } = this.state
+    const { forum, zonas, requirementsAccepted } = this.state
 
     if (!forum) return null
     if(forum.config.propuestasAbiertas || (this.state.forum.privileges && this.state.forum.privileges.canChangeTopics)) {
@@ -331,6 +315,29 @@ class FormularioPropuesta extends Component {
               value={this.state['documento']}
               onChange={this.handleInputChange}
               disabled={true}/>
+          </div>
+
+          <div className='form-group'>
+            <label htmlFor='zona'>
+              Zona
+            </label>
+
+            <select
+              className='form-control'
+              name='zona'
+              value={this.state['zona']}
+              onChange={this.handleInputChange}
+              style={{ 'height': '50px' }}
+              disabled={true}
+            >
+              <option value=''>Pertenece a la zona...</option>
+              {zonas.length > 0 && zonas.map(zona =>
+                <option key={zona._id} value={zona._id}>
+                  {zona.nombre}
+                </option>
+              )}
+            </select>
+
           </div>
           <div className='form-group'>
             <label className='required' htmlFor='email'>
@@ -598,46 +605,6 @@ class FormularioPropuesta extends Component {
           </div>
           <hr />
 
-            <div className='form-group'>
-              <label htmlFor='zona'>
-                * ¿En qué zona se desarrollará la idea?
-              </label>
-              <p className='help-text'>Selecciona el bario y te indicaremos la zona a la que pertenece</p>
-              <select
-                className='form-control'
-                name='barrio'
-                value={this.state['barrio']}
-                onChange={this.handleInputChange}
-                required
-                >
-                <option value=''>Seleccione un barrio</option>
-                {barrios.length > 0 && barrios.map((barrio, index) =>
-                  <option key={index} value={barrio}>
-                    {barrio}
-                  </option>
-                )}
-              </select>
-              
-              <br />
-              <select
-                className={`form-control ${this.state['zona'] && "zona-selected"}`}
-                name='zona'
-                value={this.state['zona']}
-                onChange={this.handleInputChange}
-                style={{'height': '50px'}}
-                disabled={true}>
-                <option value=''>Pertenece a la zona...</option>
-                {zonas.length > 0 && zonas.map(zona =>
-                  <option key={zona._id} value={zona._id}>
-                    {zona.nombre}
-                  </option>
-                )}
-              </select>
-              {this.state['zona'] && <p className='help-text'>* Recordá que las ideas compiten por zona y no por barrio, al momento de la votación verás que las ideas serán para diversos barrios</p>}
-            </div>
-
-                    
-
 
           <div className='form-group'>
             <label htmlFor='ubicacion'>
@@ -709,8 +676,7 @@ class FormularioPropuesta extends Component {
                     {this.hasErrorsField('problema') && <li className="error-li">El campo "Problema" no puede quedar vacío</li> }
                     {this.hasErrorsField('tag') && <li className="error-li">El campo "Tipo" no puede quedar vacío</li> }
                     {this.hasErrorsField('solucion') && <li className="error-li">El campo "Tu idea" no puede quedar vacío</li> }
-                    {this.hasErrorsField('beneficios') && <li className="error-li">El campo "Beneficios" no puede quedar vacío</li> }
-                    {this.hasErrorsField('barrio') && <li className="error-li">El campo "Barrio" no puede quedar vacío</li> }
+                    {this.hasErrorsField('beneficios') && <li className="error-li">El campo "Beneficios" no puede quedar vacío</li>}
                     {this.hasErrorsField('zona') && <li className="error-li">El campo "Zona" no puede quedar vacío</li> }
              </ul>
              </div>

@@ -185,6 +185,8 @@ class FormularioPropuesta extends Component {
       formData['attrs.admin-comment-referencia'] = this.state.adminCommentReference
       formData['attrs.state'] = this.state.state
     }
+    console.log(formData);
+
     if (this.state.mode === 'new') {
       this.crearPropuesta(formData)
     } else {
@@ -291,10 +293,8 @@ class FormularioPropuesta extends Component {
       <div className='form-propuesta'>
         <div className='propuesta-header'>
           <h1 className='text-center'>Formulario para enviar ideas</h1>
-          <p>¡Compartinos tus ideas para mejorar nuestra comunidad!</p>
-          {//<p>¡Gracias a todos y todas por participar!</p>
-          }
         </div>
+        <p className='subtitle'>¡Compartinos tus ideas para mejorar nuestra comunidad!</p>
         {/* FORMULARIO GOES BEHIND THIS */}
         <form className='wrapper' onSubmit={this.handleSubmit}>
           <div className="bar-section">

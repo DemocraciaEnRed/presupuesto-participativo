@@ -11,7 +11,6 @@
     margin-top: 140px
   .propuesta-header
     color: white
-    // text-shadow: 0 1px 3px #333
     display: flex
     align-items: center
     flex-direction: column
@@ -20,7 +19,6 @@
     width: 100%
     padding: 0 20px
     text-align: center
-    background-image: unquote("url('ext/lib/site/formulario-propuesta/fondo-formulario-propuestas.svg')")
     background-repeat: no-repeat
     background-position: center;
     background-color: $secondary-light
@@ -29,20 +27,21 @@
       font-size: 32px
       margin:0;
       font-family: 'AlfabetLight', sans-serif
-      background-color: $secondary-light;
+      background-color: $primary;
       padding: 10px 20px;
       @media screen and (min-width: 764px)
         font-size: 32px
-    p
-      font-size: 16px
-      font-family: 'AlfabetBold', sans-serif
-      margin:0;
-      padding: 4px 30px;
-      // margin-top:6px;
-      // background-color: rgba(23,145,190,0.6)
-      background-color: $primary
-      @media screen and (min-width: 764px)
-        font-size: 20px
+  .subtitle
+    font-size: 16px
+    font-family: 'AlfabetBold', sans-serif
+    margin:0;
+    padding: 4px 30px;
+    color: #fff
+    // margin-top:6px;
+    // background-color: rgba(23,145,190,0.6)
+    background-color: $terciary
+    @media screen and (min-width: 764px)
+      font-size: 20px
 
   .wrapper
     max-width:900px
@@ -58,26 +57,25 @@
       text-align: center
       &.acerca-requisitos
         margin-top: 0
-        background: #00758F;
+        background: $terciary;
         .section-title
           font-size: 20px
           font-family: 'AlfabetLight', sans-serif
           color: white
           text-align: center;        
       &.acerca-propuesta
-        background: $secondary-light;
+        background: $primary;
         margin: 2rem 20%    
         margin-bottom: 0
       p
         margin: 0
-        color: #000
+        color: #fff
         text-align: center;
         line-height: normal;
       .section-title
         font-size: 30px
         font-weight: bold
         font-family: 'AlfabetLight', sans-serif
-        color: white
         text-align: center;
       .section-subtitle
         color: #484747
@@ -108,14 +106,14 @@
       width: 100%
     
     .btn-requirements-accepted
-      color: $secondary-light
+      color: $secondary
       font-family: 'AlfabetLight', sans-serif
       font-style: normal;
       font-size: 25px;
       line-height: 30px;
       text-align: center;
       padding: 1rem;
-      border: 3px solid $secondary-light;
+      border: 3px solid $secondary;
       filter: drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
       border-radius: 5px;
       background: #FFFFFF;      
@@ -264,12 +262,12 @@
       color: red;
 
   .idea-no-factible
+    text-align: center;
     margin-top: 20px
     margin-bottom: 20px  
     align-items: center;
     padding: 20px 20px;
     height: 130px;
-    background: #FFE8E3;
     border: 5px solid #FB5734;
     border-radius: 25px;    
     img
@@ -288,13 +286,13 @@
       color: #000000;
 
   .idea-factible
+    text-align: center;
     margin-top: 20px
     margin-bottom: 20px  
     align-items: center;
     padding: 20px 20px;
     height: 130px;
-    background: #FFE8E3;
-    border: 5px solid $primary;
+    border: 5px solid #23CA2F;
     border-radius: 25px;    
     img
       margin-top: -2.8rem
@@ -318,7 +316,6 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    color: $secondary-light;
 
   .parte-ubicacion
     font-family: 'AlfabetLight', sans-serif

@@ -38,6 +38,7 @@
     display: flex
     justify-content: space-between
     margin-bottom: 0
+    gap: 1rem
     @media screen and (max-width: 992px)
       flex-direction:column
       align-items:center
@@ -47,7 +48,7 @@
       position: relative
       text-align: left
       &:focus
-        outline: 1px solid #333
+        outline: 1px solid #000
       .dropdown-button
         width: 300px
         @media screen and (min-width: 570px)
@@ -57,8 +58,8 @@
         @media screen and (min-width: 1200px)
           width: 302px
         height: 45px
-        border-radius: 2px
-        border: solid 1px rgba(153, 153, 153, 0.14)
+        border-radius: 5px
+        border: solid 2px #000
         background: #FFF
         display: flex
         align-items: center;
@@ -66,25 +67,26 @@
         padding-left: 20px
         padding-right: 20px
         cursor: pointer
+        margin: 0
         .button-label
           font-family: 'AlfabetLight', sans-serif
           font-size: 16px
           font-weight: bold;
           color: #000
           &.active
-            color: $secondary-light
+            color: $terciary
         .badge
           font-family: 'Lato', sans-serif
           font-size: 14px
           color: #FFF
-          background-color: $secondary-light
+          background-color: $terciary
           border-radius: 100%
           margin-left: 7px
           padding: .25em .5em
         .caret-down
           width: 12px
           height: 6px
-          color: #999999
+          color: #000
           margin-top: -20px;
 
       .dropdown-options

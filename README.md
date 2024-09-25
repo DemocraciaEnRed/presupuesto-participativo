@@ -3,7 +3,7 @@
 # Presupuestos Participativos
 
 ![Node Version](<https://img.shields.io/badge/node-v8(!)-red>)
-![Documentation](https://img.shields.io/badge/docs-available-brightgreen)
+![Documentation](https://img.shields.io/badge/docs-obsolete-yellow)
 ![License](https://img.shields.io/github/license/DemocraciaEnRed/presupuesto-participativo)
 ![Docker](https://img.shields.io/badge/docker-ready-blue)
 ![Version](https://img.shields.io/github/v/release/DemocraciaEnRed/presupuesto-participativo)

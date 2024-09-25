@@ -4,15 +4,18 @@
   width: 100%
   font-size: 16px
   padding: 5%
+  .container
+    .footer-info
+      display: flex
+      justify-content: space-between
+      @media screen and (max-width: 768px)
+        flex-direction: column
   @media screen and (min-width: 769px)
     font-size: 20px
   .contacto-detalles
-    @media screen and (min-width: 500px)
-      float: left
-      width: 45%
-      margin-right: 5%
-    @media screen and (min-width: 769px)
-      float: left
+    width:50%
+    @media screen and (max-width: 768px)
+        width 100%
     h3
       color: black
       border-bottom: solid 2px $primary
@@ -81,8 +84,8 @@
         margin-top: 40px
   .logos
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    flex: 1
+    justify-content: center;
     width: 100%;
     padding: 20px;
     @media (max-width: 550px)
@@ -115,19 +118,6 @@
     width: 15em
     @media (max-width: 550px)
       margin: 30px auto
-    .logo-mgp
-      display: block
-      background-image: unquote("url('ext/lib/site/footer/logo-pp.png')")
-      width: 100%
-      padding-top: 33%
-      background-repeat: no-repeat
-      background-position: center
-      background-size: contain
-      margin-bottom: 5px
-      position: relative
-      @media screen and (min-width: 360px)
-        height: 70px
-
   .social-icon
     text-align: center
     margin: 20px 0

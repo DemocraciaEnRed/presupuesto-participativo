@@ -8,7 +8,7 @@ let jsonArray = null
 let repeated = []
 
 csv()
-.fromFile('./padron-mgp.csv')
+  .fromFile('./padron.csv')
 .then((jsonObj) => {
   jsonArray = jsonObj
   jsonArray = jsonArray.map((item) => item['MATRICULA'])
@@ -21,7 +21,7 @@ csv()
   })
   console.log('Unique DNI counts: ' + onlyUniques.length)
   // write the unique values to a new file
-  let uniqueFile = fs.createWriteStream('./padron-mgp-unique.csv')
+  let uniqueFile = fs.createWriteStream('./padron-unique.csv')
   uniqueFile.write('MATRICULA\n')
   onlyUniques.forEach((item) => {
     uniqueFile.write(item + '\n')

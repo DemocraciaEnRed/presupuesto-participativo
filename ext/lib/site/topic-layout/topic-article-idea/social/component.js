@@ -5,7 +5,7 @@ import config from 'lib/config'
 export default (props) => {
   const { topic, twitterText, socialLinksUrl } = props
   const { url, mediaTitle, participants } = topic
-  const messageWp = `Sumate a pensar la Ciudad que queremos. Apoyemos esta idea para mejorar la MGP: ${mediaTitle} ` + socialLinksUrl
+  const messageWp = `Sumate a pensar la Ciudad que queremos. Apoyemos esta idea para mejorar la ciudad: ${mediaTitle} ` + socialLinksUrl
   return (
     <div className='topic-article-content topic-social-vilo'>
       <div className='share-links'>

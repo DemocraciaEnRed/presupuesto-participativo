@@ -62,16 +62,12 @@ class TopicArticle extends Component {
     switch (name) {
       case 'pendiente':
         return 'pendiente'
-        break
       case 'no-factible':
         return 'no factible'
-        break
       case 'integrado':
         return 'integrada'
-        break
       default:
         return 'factible'
-        break
     }
   }
 
@@ -293,7 +289,7 @@ class TopicArticle extends Component {
                   triggerOpenedClassName='topic-article-comentario' 
                   trigger={`Comentarios del moderador`}>
                   {topic.attrs['admin-comment'].replace(/https?:\/\/[a-zA-Z0-9./]+/g)}                
-                  <p className='font-weight-bold'>Equipo de Coordinación y Gestión PPMGP</p>
+                    <p className='font-weight-bold'>Equipo de Coordinación y Gestión PP</p>
                 </Collapsible>            
               }
 

@@ -59,7 +59,7 @@ export default class HomeAbout extends Component {
           <div className='ext-acerca-de container'>
             <div className='filas'>
               <div className='faq text-left'>
-              <p className='p-padding'>Accedé al <a target="_blank" href="/reglamento">reglamento general</a> de Participa MGP. En este espacio te dejamos algunas normas básicas para que conozcas el funcionamiento del Presupuesto Participativo.</p>
+                <p className='p-padding'>Accedé al <a target="_blank" href="/reglamento">reglamento general</a> de presupuesto participativo. En este espacio te dejamos algunas normas básicas para que conozcas el funcionamiento del Presupuesto Participativo.</p>
                 {faqs && 
                   <Accordion startPosition={-1}>
                     {faqs.map((faq) => (

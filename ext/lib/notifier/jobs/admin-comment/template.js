@@ -17,7 +17,7 @@ module.exports = ({
 }) => emailTemplate({
   body: html`
     <p>Hola <strong>${userName}</strong>,</p>
-    <p>Tu idea <strong>${topicTitle}</strong> recibió el siguiente comentario del equipo de presupuesto participativo MGP:
+    <p>Tu idea <strong>${topicTitle}</strong> recibió el siguiente comentario del equipo de presupuesto participativo:
      <div style='padding:15px;border-radius: 5px;'><i>${adminComment}</i></div>
      <br />
      ${buttonTemplate({

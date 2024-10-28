@@ -1,6 +1,4 @@
 // Script traído de ext/bin/migrate-pp.js
-const config = require('lib/config')
-const ObjectID = require('mongoose').Types.ObjectId
 const dbReady = require('lib/models').ready
 const Topic = require('lib/models').Topic
 const Forum = require('lib/models').Forum

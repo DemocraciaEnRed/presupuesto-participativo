@@ -1,7 +1,6 @@
 const dbReady = require('lib/models').ready
 
 const Forum = require('lib/models').Forum
-const config = require('lib/config')
 
 /**
  * Make any changes you need to make to the database here
@@ -22,11 +21,11 @@ exports.up = function up (done) {
                                          : config.propuestasTextoCerradas */
         //forumProyecto.config.mostrarSeccionEventos = false
         
-        forumProyecto.config.propuestasAbiertas = config.propuestasAbiertas
+        forumProyecto.config.propuestasAbiertas = false
         forumProyecto.config.preIdeacion = false
         forumProyecto.config.ideacion = false
         forumProyecto.config.PreVotacion = false
-        forumProyecto.config.votacion = config.votacionAbierta
+        forumProyecto.config.votacion = false
         forumProyecto.config.seguimientoNormal = true
 
 

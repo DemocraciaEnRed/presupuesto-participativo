@@ -9,6 +9,7 @@ services:
       - ./tmp/db:/data/db
 
   app:
+    network_mode: host
     build:
       context: .
     image: ghcr.io/democraciaenred/presupuesto-participativo
@@ -17,8 +18,6 @@ services:
       - /usr/src/node_modules
     ports:
       - 3000:3000
-    links:
-      - mongo
     environment:
       - NODE_PATH=.
       - NODE_ENV=development

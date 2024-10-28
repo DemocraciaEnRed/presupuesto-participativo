@@ -27,7 +27,7 @@ exports.up = function up (done) {
         forumProyecto.config.PreVotacion = false
         forumProyecto.config.votacion = false
         forumProyecto.config.seguimientoNormal = true
-
+        forumProyecto.visibility = "collaborative"
 
         forumProyecto.markModified('config')
 

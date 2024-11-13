@@ -1,5 +1,5 @@
 {
-  "locale": "en",
+  "locale": "es",
   "protocol": "http",
   "warnHTTP": true,
   "host": "localhost",
@@ -17,7 +17,7 @@
   "allowEmailAliases": true,
   "facebookSignin": false,
   "publicEmails": false,
-  "moderatorEnabled": false,
+  "moderatorEnabled": true,
   "checkNodeVersion": false,
   "auth": {
     "basic": {
@@ -114999,18 +114999,18 @@
     "googleSheetApiKey"
   ],
   "socialshare": {
-    "siteName": "DemocracyOS",
-    "siteDescription": "DemocracyOS voting system",
-    "image": "https://2.gravatar.com/avatar/a8b9176bd0d042db078bf38500727671?d=https%3A%2F%2Fidenticons.github.com%2F14bae9f2564556f8eb23cc263a779f59.png&s=400",
-    "domain": "democracyos.org",
+    "siteName": "Presupuesto Participativo",
+    "siteDescription": "Sumate a elegir proyectos para la Ciudad que queremos",
+    "image": "",
+    "domain": "",
     "twitter": {
-      "username": "@democracyos"
+      "username": "@fundacionDER"
     }
   },
   "logo": "/lib/boot/logo.png",
   "logoMobile": "/lib/boot/logo-mobile.png",
   "favicon": "/lib/boot/favicon.ico",
-  "organizationName": "DemocracyOS on GitHub",
+  "organizationName": "Presupuesto Participativo",
   "organizationEmail": "no-reply@democracyos.org",
   "organizationUrl": "https://github.com/DemocraciaEnRed/",
   "learnMoreUrl": "",
@@ -115021,14 +115021,14 @@
   "privacyPolicy": false,
   "glossary": false,
   "homeLink": "/",
-  "headerBackgroundColor": "#64476e",
-  "headerFontColor": "#fff",
+  "headerBackgroundColor": "#ffffff",
+  "headerFontColor": "#4a4949",
   "headerContrast": false,
   "googleAPIKey": "",
   "visibility": "visible",
   "usersWhitelist": false,
-  "multiForum": false,
-  "restrictForumCreation": false,
+  "multiForum": true,
+  "restrictForumCreation": true,
   "defaultForum": "",
   "tweetText": "",
   "forceSafeImageURLs": true,
@@ -115053,7 +115053,7 @@
     "uk",
     "zh_TW"
   ],
-  "enforceLocale": false,
+  "enforceLocale": true,
   "forumProyectos": "proyectos",
   "adminMail": "it@democracyos.org",
   "adminPass": "123123",
